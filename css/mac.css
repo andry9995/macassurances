@@ -52,3 +52,28 @@ li.nav-item {
 .btn-mac:hover {
     color: #fff;
 }
+
+.form-control-lg, .form-select-lg {
+    border-radius: unset !important;
+}
+
+#footer {
+	padding-top: 0;
+}
+
+.section-title {
+    font-size: 6rem !important;
+    color: #0092e0;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+#scroll-top {
+    color: #ffffff;
+    border: 1px solid #0092e0;
+    background: #0092e0;
+    width: 4rem;
+    height: 4rem;
+}

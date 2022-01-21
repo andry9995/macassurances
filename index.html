@@ -300,47 +300,21 @@
         <section id="contactus" class="section bg-lightgray">
             <header class="container text-center">
                 <h1 class="section-title">Contactez-nous</h1>
-                <p class="section-desc">
+               <!--  <p class="section-desc">
                     Prenez contact avec nous. Nous voulons de vos nouvelles. Discutons comment pouvons-nous fournir un meilleur support et des services...
-                </p>
+                </p> -->
             </header>
+            <div id="map"></div><!-- End #map -->
             <div class="lg-margin2x"></div><!-- End .lg-margin -->
 
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="contact-info-box text-center">
-                            <span class="contact-info-icon yellowbg"><i class="fas fa-map-marked-alt"></i></span>
-                            <ul class="contact-info-list">
-                                <li>Moroni Philips Grande Comores</li>
-                            </ul>
-                        </div><!-- End .contact-info-box -->
-                    </div><!-- End .col-lg-4 -->
-                    
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="contact-info-box text-center">
-                            <span class="contact-info-icon lightbluebg"><i class="fas fa-mobile-alt"></i></span>
-                            <ul class="contact-info-list">
-                                <li><a href="tel:#">+(269) 359 2414</a></li>
-                            </ul>
-                        </div><!-- End .contact-info-box -->
-                    </div><!-- End .col-lg-4 -->
-
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="contact-info-box text-center">
-                            <span class="contact-info-icon redbg"><i class="far fa-envelope"></i></span>
-                            <ul class="contact-info-list">
-                                <li><a href="mailto:#">mac.assurances@gmail.com</a></li>
-                            </ul>
-                        </div><!-- End .contact-info-box -->
-                    </div><!-- End .col-lg-4 -->
-                </div><!-- End .row -->
+                
                 
                 <div class="lg-margin"></div><!-- End .lg-margin -->
 
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-lg-8">
-                        <h2 class="text-center lg-margin">Entrer en contact</h2>
+                        <!-- <h2 class="text-center lg-margin">Entrer en contact</h2> -->
                         <form action="#" id="contact-form" method="post" novalidate>
                             <div class="form-group">
                                 <input type="text" name="contactname" id="contactname" required class="form-control form-control-lg">
@@ -362,7 +336,7 @@
                                 <label for="contactmessage" class="animated-label textarea-label">Message *</label>
                             </div><!-- End .form-group -->
 
-                            <div class="form-group text-center mb-0">
+                            <div class="form-group text-right mb-0">
                                 <input type="submit" class="btn btn-mac btn-lg" value="Envoyer">
                             </div><!-- End .form-group -->
                         </form>
@@ -373,20 +347,36 @@
 
 
         <footer id="footer" class="pattern9 text-dark">
-            <div class="container">
-                <a href="index.html" class="footer-logo" title="Geass - Creative Onepage Template">
-                    <img src="images/logo.png" class="logo-dark" alt="Geass Logo">
-                    <img src="images/logo-white.png" class="logo-light" alt="Geass Logo">
-                </a>
-            </div><!-- End .container -->
-
             <div class="footer-social-icons">
                 <div class="container">
-                    <div class="socials justify-content-center">
-                        <a href="#" class="social facebook" data-bs-placement="top" data-bs-toggle="tooltip" data-bs-custom-class="social-facebook" title="Suivez-nous Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social twitter" data-bs-placement="top" data-bs-toggle="tooltip" data-bs-custom-class="social-twitter" title="Suivez-nous Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social linkedin" data-bs-placement="top" data-bs-toggle="tooltip" data-bs-custom-class="social-linkedin" title="Trouvez-nous sur Linkedin"><i class="fab fa-linkedin"></i></a>
-                    </div><!-- End .socials -->
+                    <div class="row justify-content-center">
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="contact-info-box text-center">
+                                <span class="contact-info-icon yellowbg"><i class="fas fa-map-marked-alt"></i></span>
+                                <ul class="contact-info-list">
+                                    <li>Moroni Philips Grande Comores</li>
+                                </ul>
+                            </div><!-- End .contact-info-box -->
+                        </div><!-- End .col-lg-4 -->
+                        
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="contact-info-box text-center">
+                                <span class="contact-info-icon lightbluebg"><i class="fas fa-mobile-alt"></i></span>
+                                <ul class="contact-info-list">
+                                    <li><a href="tel:#">+(269) 359 2414</a></li>
+                                </ul>
+                            </div><!-- End .contact-info-box -->
+                        </div><!-- End .col-lg-4 -->
+
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="contact-info-box text-center">
+                                <span class="contact-info-icon redbg"><i class="far fa-envelope"></i></span>
+                                <ul class="contact-info-list">
+                                    <li><a href="mailto:#">mac.assurances@gmail.com</a></li>
+                                </ul>
+                            </div><!-- End .contact-info-box -->
+                        </div><!-- End .col-lg-4 -->
+                    </div><!-- End .row -->
                 </div><!-- End .container -->
             </div><!-- End .footer-social-icons -->
 
@@ -397,7 +387,7 @@
     </div><!-- End #wrapper -->
 
     <!-- scroltop -->
-    <a href="#top" id="scroll-top" title="Go to top"><i class="fas fa-angle-double-up"></i></a>
+    <a href="#top" id="scroll-top" title="Go to top"><i class="fas fa-angle-up"></i></a>
 
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsNNnxMPiLLBC4VqdR_YUjLefbhYzEN_E"></script>
