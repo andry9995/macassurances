@@ -81,7 +81,16 @@ li.nav-item {
 .portfolio-item-title h4 a {
 	font-size: 20px;
 	color: #0092e0;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
+}
+
+h4.member-name {
+    font-size: 20px;
+    color: #0092e0;
+    text-align: center;
+    background: #fff;
+    padding: 5px;
+    text-transform: uppercase;
 }
 
 .portfolio-item-title{
@@ -116,7 +125,8 @@ section#our-vision {
 	width: 100%;
 }
 
-#our-values .row{
+#our-values .row,
+.bg-mac{
 	background: #0092e0;
 }
 
