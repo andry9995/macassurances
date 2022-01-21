@@ -163,3 +163,7 @@ article.article.wow {
     text-align: left;
     text-transform: unset;
 }
+
+.text-left {
+    text-align: left !important;
+}
