@@ -851,28 +851,18 @@
 			['<div class="map-info-box">' +
 				'<ul class="contact-info-list">' +
 					'<li><span><i class="fa fa-home fa-fw"></i></span> ' + 
-						'Mimar Sinan Mh., Konak/İzmir, Türkiye' +
+						'Agence de Moroni' +
 					'</li>' + 
 					'<li><span><i class="fa fa-phone fa-fw"></i></span> ' +
-						'0 (0911) 324 11 83' +
+						'(+269) 00 000 00' +
 					'</li>' + 
 				'</ul>' + 
-			'</div>', 38.396652, 27.090560, 9],
-			['<div class="map-info-box">' +
-				'<ul class="contact-info-list">' +
-					'<li><span><i class="fa fa-home fa-fw"></i></span> ' + 
-						'Kültür Mh., Konak/İzmir, Türkiye' +
-					'</li>' + 
-					'<li><span><i class="fa fa-phone fa-fw"></i></span> ' +
-						'0 (0911) 324 11 84' +
-					'</li>' + 
-				'</ul>' + 
-			'</div>', 38.432742, 27.159140, 8]
+			'</div>', -11.601323728314865, 43.33951320937317, 8]
 		];
 
 		var map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 13,
-			center: new google.maps.LatLng(38.414592, 27.143122),
+			center: new google.maps.LatLng(-11.601323728314865, 43.33951320937317),
 			scrollwheel: false,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		});
