@@ -153,3 +153,13 @@ article.article.wow {
 .article-timeline-date:before {
     background: #f8d61b;
 }
+
+.nav-tabs.flex-column .nav-link.active {
+    background-color: #0092e0;
+    color: #fff;
+}
+
+.nav-tabs.flex-column .nav-link {
+    text-align: left;
+    text-transform: unset;
+}
