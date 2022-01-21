@@ -736,25 +736,25 @@
 				targetElIn = targetEl.find('.single-portfolio');
 
 
-			$('.open-btn').on('click', function (e) {
-				e.preventDefault();
-				var $this = $(this),
-					parentEl = $this.closest('.portfolio-item');
+			// $('.open-btn').on('click', function (e) {
+			// 	e.preventDefault();
+			// 	var $this = $(this),
+			// 		parentEl = $this.closest('.portfolio-item');
 
-				self.lastActivePos = parentEl.offset().top;
+			// 	self.lastActivePos = parentEl.offset().top;
 
-				if(!targetEl.is(':hidden')) {
+			// 	if(!targetEl.is(':hidden')) {
 
-					self.container.find('.portfolio-item.active').removeClass('active');
+			// 		self.container.find('.portfolio-item.active').removeClass('active');
 
-					self.loadProject.call($this, targetEl, parentEl);
+			// 		self.loadProject.call($this, targetEl, parentEl);
 
-				} else {
+			// 	} else {
 
-					self.loadProject.call(this, targetEl, parentEl);
+			// 		self.loadProject.call(this, targetEl, parentEl);
 
-				}
-			});
+			// 	}
+			// });
 		},
 		loadProject: function (targetEl, parentEl) {
 			var $this= $(this),
