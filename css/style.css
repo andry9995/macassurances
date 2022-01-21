@@ -5659,7 +5659,7 @@ select.form-control {
   opacity:1;
 }
 
-.article:after,
+/*.article:after,
 .article:before {
   content:'';
   position: absolute;
@@ -5669,9 +5669,9 @@ select.form-control {
   z-index:0;
   border:.1rem solid var(--article-border);
   border-radius:0 0 .6rem .6rem;
-}
+}*/
 
-.article:before {
+/*.article:before {
   width:98%;
   left:1%;
   z-index:1;
@@ -5686,7 +5686,7 @@ select.form-control {
   border-top:none;
   background: var(--article-bg);
   box-shadow:0 .2rem 1.2rem rgba(0,0,0, 0.04);
-}
+}*/
 
 .article-media-container {
   position: relative;
