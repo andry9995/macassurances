@@ -1,0 +1,54 @@
+img.logo.logo-dark,
+img.logo-dark {
+    width: 64px;
+}
+
+li.nav-item {
+    text-transform: uppercase;
+    font-family: Poppins,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: normal;
+    font-size: 13px;
+}
+
+.contact-item span {
+    /*font-weight: 600;*/
+    font-size: 13px;
+    color: #0092e0;
+}
+
+.contact-container-flex {
+	display: flex;
+    column-gap: 1.5rem;
+}
+
+.contact-top {
+	border-bottom: 1px rgb(0 146 224 / 20%) solid;
+	padding: 5px;
+}
+
+.tp-bullet.selected, .tp-bullet:hover {
+    background: #fff401;
+}
+
+.tp-bullet {
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+}
+
+.btn {
+    border-radius: unset;
+}
+
+.btn-mac {
+    color: #ffffff;
+    background-color: #0092e0;
+    border-color: #0092e0;
+}
+
+.btn-mac:hover {
+    color: #fff;
+}
