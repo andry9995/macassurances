@@ -12,7 +12,7 @@
             <ul id="portfolio-item-container" class="clearfix" data-maxcolumn="4" data-animationclass="fadeInUpBig">
                 <li class="portfolio-item animate-item photography" data-animate-time="80">
                     <div class="portfolio-item-wrapper">
-                        <img src="images/services/auto.jpg" alt="item 1">
+                        <img src="/assets/images/services/auto.jpg" alt="item 1">
                         <div class="portfolio-overlay overlay-yellow">
                             <a href="single-service.html" title="Nam facilisis condimentum" class="open-btn"></a>
                             <h2 class="portfolio-title"><a href="single-service.html" title="Single Portfoli Page">Automobile</a></h2>
@@ -26,7 +26,7 @@
                 </li>
                 <li class="portfolio-item animate-item photography" data-animate-time="80">
                     <div class="portfolio-item-wrapper">
-                        <img src="images/services/habitation.jpg" alt="item 1">
+                        <img src="/assets/images/services/habitation.jpg" alt="item 1">
                         <div class="portfolio-overlay overlay-yellow">
                             <a href="single-service.html" title="Nam facilisis condimentum" class="open-btn"></a>
                             <h2 class="portfolio-title"><a href="single-service.html" title="Single Portfoli Page">Habitation</a></h2>
@@ -40,7 +40,7 @@
                 </li>
                 <li class="portfolio-item animate-item photography" data-animate-time="80">
                     <div class="portfolio-item-wrapper">
-                        <img src="images/services/scolaire.jpg" alt="item 1">
+                        <img src="/assets/images/services/scolaire.jpg" alt="item 1">
                         <div class="portfolio-overlay overlay-yellow">
                             <a href="single-service.html" title="Nam facilisis condimentum" class="open-btn"></a>
                             <h2 class="portfolio-title"><a href="single-service.html" title="Single Portfoli Page">Scolaire</a></h2>
@@ -54,7 +54,7 @@
                 </li>
                 <li class="portfolio-item animate-item photography" data-animate-time="80">
                     <div class="portfolio-item-wrapper">
-                        <img src="images/services/assurances.jpg" alt="item 1">
+                        <img src="/assets/images/services/assurances.jpg" alt="item 1">
                         <div class="portfolio-overlay overlay-yellow">
                             <a href="single-service.html" title="Nam facilisis condimentum" class="open-btn"></a>
                             <h2 class="portfolio-title"><a href="single-service.html" title="Single Portfoli Page">Assurances</a></h2>

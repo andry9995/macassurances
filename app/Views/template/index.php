@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>MAC ASSURANCES</title>
+    <title><?php echo $titre; ?> | MAC Assurances</title>
     <meta name="description" content="MAC Mutuelle d'assurances Comores">
     <meta name="author" content="Eon">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -89,13 +89,13 @@
                     <div class="collapse navbar-collapse flex-lg-grow-0 ms-lg-auto" id="main-menu">
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" href="index.html">Accueil</a>
+                                <a class="nav-link active" href="<?php echo site_url(); ?>">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="our-services.html">Nos Produits</a>
+                                <a class="nav-link" href="<?php echo site_url('services'); ?>">Nos Produits</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="our-agencies.html">Réseau et Contact</a>
+                                <a class="nav-link" href="<?php echo site_url('agences/agences'); ?>">Réseau et Contact</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#portfolio">Devis</a>
