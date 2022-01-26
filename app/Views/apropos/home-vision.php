@@ -1,6 +1,4 @@
-<?= $this->extend('template/index') ?>
 
-<?= $this->section('content')  ?>
 <!-- Begin Home vision -->
 <section id="our-vision" class="section wow fadeInLeftBig">
     <header class="container text-center">
@@ -19,5 +17,4 @@
         </div>
     </div>
 </section>
-<!-- #End Home vision -->
-<?= $this->endSection();  ?>
+<!-- #End Home vision -->   

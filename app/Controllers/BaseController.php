@@ -12,10 +12,9 @@ use Psr\Log\LoggerInterface;
 /**
  * Class BaseController
  *
- * BaseController provides a convenient place for loading components
- * and performing functions that are needed by all your controllers.
- * Extend this class in any new controllers:
- *     class Home extends BaseController
+ * BaseController provides a convenient place for loading components and
+ * performing functions that are needed by all your controllers. Extend this
+ * class in any new controllers: class Home extends BaseController
  *
  * For security be sure to declare any new methods as protected or private.
  */
@@ -48,7 +47,21 @@ class BaseController extends Controller
     private $data = [];
 
     /**
+     * Clé de l'API
+     * Cette clé permettra de bien cibler le site web que nous voulons 
+     * Acceder aux données
+     * 
+     * @var string
+     */
+    
+    protected $siteKey = null;
+
+    /**
      * Constructor.
+     *
+     * @param      \CodeIgniter\HTTP\RequestInterface   $request   The request
+     * @param      \CodeIgniter\HTTP\ResponseInterface  $response  The response
+     * @param      \Psr\Log\LoggerInterface             $logger    The logger
      */
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
@@ -59,10 +72,14 @@ class BaseController extends Controller
 
         // E.g.: $this->session = \Config\Services::session();
 
+        $this->siteKey = '61f0e8a8c01a7';
+
         $this->data = [ 
             'page'  =>  '',
             'titre' =>  'MAC Assurances',
             'function' =>  'default'
         ];
+
+        
     }
 }
