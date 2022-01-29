@@ -1,0 +1,48 @@
+CRITICAL - 2022-01-29 02:42:46 --> curl_getinfo(): Argument #1 ($handle) must be of type CurlHandle, string given
+#0 C:\wamp\www\macassurances\app\Controllers\Services.php(24): curl_getinfo('http://shissabs...')
+#1 C:\wamp\www\macassurances\system\CodeIgniter.php(825): App\Controllers\Services->index()
+#2 C:\wamp\www\macassurances\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Services))
+#3 C:\wamp\www\macassurances\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\macassurances\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp\www\macassurances\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\mac...')
+#6 {main}
+CRITICAL - 2022-01-29 02:43:16 --> curl_getinfo(): Argument #1 ($handle) must be of type CurlHandle, string given
+#0 C:\wamp\www\macassurances\app\Controllers\Services.php(24): curl_getinfo('http://shissabs...')
+#1 C:\wamp\www\macassurances\system\CodeIgniter.php(825): App\Controllers\Services->index()
+#2 C:\wamp\www\macassurances\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Services))
+#3 C:\wamp\www\macassurances\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\macassurances\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp\www\macassurances\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\mac...')
+#6 {main}
+CRITICAL - 2022-01-29 02:43:49 --> curl_getinfo(): Argument #1 ($handle) must be of type CurlHandle, string given
+#0 C:\wamp\www\macassurances\app\Controllers\Services.php(24): curl_getinfo('http://shissabs...', 'dJfhYwdHxk9epUf...')
+#1 C:\wamp\www\macassurances\system\CodeIgniter.php(825): App\Controllers\Services->index()
+#2 C:\wamp\www\macassurances\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Services))
+#3 C:\wamp\www\macassurances\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\macassurances\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp\www\macassurances\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\mac...')
+#6 {main}
+CRITICAL - 2022-01-29 02:53:27 --> foreach() argument must be of type array|object, null given
+#0 C:\wamp\www\macassurances\app\Views\services\home-service.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\wamp\\www\\mac...', 13)
+#1 C:\wamp\www\macassurances\system\View\View.php(210): include('C:\\wamp\\www\\mac...')
+#2 C:\wamp\www\macassurances\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\macassurances\system\Common.php(1089): CodeIgniter\View\View->render('services/home-s...', Array, true)
+#4 C:\wamp\www\macassurances\app\Controllers\Services.php(28): view('services/home-s...', Array)
+#5 C:\wamp\www\macassurances\system\CodeIgniter.php(825): App\Controllers\Services->index()
+#6 C:\wamp\www\macassurances\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Services))
+#7 C:\wamp\www\macassurances\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\macassurances\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\macassurances\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\mac...')
+#10 {main}
+CRITICAL - 2022-01-29 02:54:36 --> foreach() argument must be of type array|object, null given
+#0 C:\wamp\www\macassurances\app\Views\services\home-service.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\wamp\\www\\mac...', 13)
+#1 C:\wamp\www\macassurances\system\View\View.php(210): include('C:\\wamp\\www\\mac...')
+#2 C:\wamp\www\macassurances\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp\www\macassurances\system\Common.php(1089): CodeIgniter\View\View->render('services/home-s...', Array, true)
+#4 C:\wamp\www\macassurances\app\Controllers\Services.php(30): view('services/home-s...', Array)
+#5 C:\wamp\www\macassurances\system\CodeIgniter.php(825): App\Controllers\Services->index()
+#6 C:\wamp\www\macassurances\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Services))
+#7 C:\wamp\www\macassurances\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp\www\macassurances\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp\www\macassurances\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\mac...')
+#10 {main}

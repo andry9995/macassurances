@@ -4,7 +4,7 @@
 <!-- Begin Home Produit -->
 <section id="portfolio" class="section bg-lightgray">
     <header class="container text-center">
-        <h1 class="section-title">Nos Produits</h1>
+        <h1 class="section-title">Détails du service</h1>
     </header>
 
     <div class="container">
@@ -15,13 +15,13 @@
                     <div class="portfolio-item-wrapper">
                         <img src="<?= $service->img; ?>" alt="Image de : <?= $service->titre; ?>">
                         <div class="portfolio-overlay overlay-yellow">
-                            <a href="<?= site_url('services/signleservice'); ?>" title="Plus d'informations sur : <?= $service->titre; ?>" class="open-btn"></a>
-                            <h2 class="portfolio-title"><a href="<?= site_url('services/signleservice'); ?>" title="<?= $service->titre; ?>"><?= $service->titre; ?></a></h2>
+                            <a href="<?= site_url('services/singleservice'); ?>" title="Plus d'informations sur : <?= $service->titre; ?>" class="open-btn"></a>
+                            <h2 class="portfolio-title"><a href="<?= site_url('services/singleservice'); ?>" title="<?= $service->titre; ?>"><?= $service->titre; ?></a></h2>
                         </div><!-- End .portfolio-overlay -->
                     </div><!-- End .portfolio-item-wrapper -->
                     <div class="portfolio-item-title">
                         <h4>
-                            <a href="single-service.html"><?= $service->titre; ?></a>
+                            <a href="<?= site_url('services/singleservice'); ?>"><?= $service->titre; ?></a>
                         </h4>
                     </div>
                 </li>
