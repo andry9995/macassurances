@@ -21,7 +21,7 @@ class Services extends BaseController
          * @var array
          */
 
-        $this->data['APISlider'] = json_decode(file_get_contents("http://shissabsysteme.com/api/siteweb/slider/list/".$this->siteKey));
+        $this->data['APISlider'] = json_decode(curl_getinfo("http://shissabsysteme.com/api/siteweb/slider/list/".$this->siteKey));
         
         var_dump($this->data['APISlider']);
         

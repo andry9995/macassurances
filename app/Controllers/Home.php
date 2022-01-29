@@ -20,8 +20,33 @@ class Home extends BaseController
          * @var array
          */
 
-        $this->data['APISlider'] = json_decode(file_get_contents("http://shissabsysteme.com/api/siteweb/slider/list/".$this->siteKey));
+        $this->data['APISlider'] = $this->getCurlData('http://shissabsysteme.com/api/siteweb/slider/list/'.$this->siteKey , $this->token);
 
-        echo view('slider/home-slider', $this->data);
+        /**
+         * APIActualités
+         * Cette variable stock dans un tablau les actualités d'un site web, 
+         * Enregister dépuis Shissab System
+         * @return id, titre, description, img
+         * @var array
+         */
+        
+        $this->data['APIActualites'] = $this->getCurlData('http://shissabsysteme.com/api/siteweb/actualite/list/'.$this->siteKey , $this->token);
+
+        //var_dump($this->data['APIActualites']); die();
+
+        echo view('home/accueil', $this->data);
+    }
+
+    public function actualites()
+    {
+        $this->data = [ 
+            'page'      =>  'Actualites',
+            'titre'     =>  'Actualités',
+            'function'  =>  'actualites'
+        ];
+
+        $this->data['APIActualites'] = $this->getCurlData('http://shissabsysteme.com/api/siteweb/actualite/list/'.$this->siteKey , $this->token);
+
+        echo view('home/actualites', $this->data);
     }
 }

@@ -790,3 +790,79 @@ CRITICAL - 2022-01-26 07:19:49 --> Invalid file: sidebar.php
 #10 C:\wamp\www\macassurances\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #11 C:\wamp\www\macassurances\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\mac...')
 #12 {main}
+CRITICAL - 2022-01-26 07:23:56 --> syntax error, unexpected token "}", expecting "," or ";"
+#0 C:\wamp\www\macassurances\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp\\www\\mac...')
+#1 C:\wamp\www\macassurances\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\wamp\www\macassurances\system\CodeIgniter.php(790): class_exists('\\App\\Controller...', true)
+#4 C:\wamp\www\macassurances\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->startController()
+#5 C:\wamp\www\macassurances\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp\www\macassurances\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp\www\macassurances\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\mac...')
+#8 {main}
+CRITICAL - 2022-01-26 07:24:03 --> Call to undefined method App\Controllers\Home::include()
+#0 C:\wamp\www\macassurances\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#1 C:\wamp\www\macassurances\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\wamp\www\macassurances\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\macassurances\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp\www\macassurances\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\mac...')
+#5 {main}
+CRITICAL - 2022-01-26 07:24:06 --> Call to undefined method App\Controllers\Home::include()
+#0 C:\wamp\www\macassurances\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#1 C:\wamp\www\macassurances\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\wamp\www\macassurances\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\macassurances\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp\www\macassurances\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\mac...')
+#5 {main}
+CRITICAL - 2022-01-26 07:24:27 --> Call to undefined method App\Controllers\Home::include()
+#0 C:\wamp\www\macassurances\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#1 C:\wamp\www\macassurances\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\wamp\www\macassurances\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\macassurances\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp\www\macassurances\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\mac...')
+#5 {main}
+CRITICAL - 2022-01-26 07:24:30 --> Call to undefined method App\Controllers\Home::include()
+#0 C:\wamp\www\macassurances\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#1 C:\wamp\www\macassurances\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\wamp\www\macassurances\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp\www\macassurances\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp\www\macassurances\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\mac...')
+#5 {main}
+CRITICAL - 2022-01-26 07:40:45 --> file_get_contents(http://shissabsysteme.com/api/siteweb/slider/list/61f0e8a8c01a7): Failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\wamp\\www\\mac...', 24)
+#1 C:\wamp\www\macassurances\app\Controllers\Services.php(24): file_get_contents('http://shissabs...')
+#2 C:\wamp\www\macassurances\system\CodeIgniter.php(825): App\Controllers\Services->index()
+#3 C:\wamp\www\macassurances\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Services))
+#4 C:\wamp\www\macassurances\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\wamp\www\macassurances\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\wamp\www\macassurances\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\mac...')
+#7 {main}
+CRITICAL - 2022-01-26 07:41:51 --> Undefined array key "APISlider"
+#0 C:\wamp\www\macassurances\app\Controllers\Services.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\wamp\\www\\mac...', 26)
+#1 C:\wamp\www\macassurances\system\CodeIgniter.php(825): App\Controllers\Services->index()
+#2 C:\wamp\www\macassurances\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Services))
+#3 C:\wamp\www\macassurances\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp\www\macassurances\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp\www\macassurances\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\mac...')
+#6 {main}
+CRITICAL - 2022-01-26 07:43:23 --> file_get_contents(http://shissabsysteme.com/api/siteweb/slider/list/61f0e8a8c01a7): Failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\wamp\\www\\mac...', 24)
+#1 C:\wamp\www\macassurances\app\Controllers\Services.php(24): file_get_contents('http://shissabs...')
+#2 C:\wamp\www\macassurances\system\CodeIgniter.php(825): App\Controllers\Services->index()
+#3 C:\wamp\www\macassurances\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Services))
+#4 C:\wamp\www\macassurances\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\wamp\www\macassurances\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\wamp\www\macassurances\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\mac...')
+#7 {main}
+CRITICAL - 2022-01-26 07:45:01 --> file_get_contents(http://shissabsysteme.com/api/siteweb/slider/list/61f0e8a8c01a7): Failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\wamp\\www\\mac...', 23)
+#1 C:\wamp\www\macassurances\app\Controllers\Home.php(23): file_get_contents('http://shissabs...')
+#2 C:\wamp\www\macassurances\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#3 C:\wamp\www\macassurances\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\wamp\www\macassurances\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\wamp\www\macassurances\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\wamp\www\macassurances\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp\\www\\mac...')
+#7 {main}

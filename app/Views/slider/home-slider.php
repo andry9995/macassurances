@@ -6,9 +6,9 @@
     <div class="rev_slider_wrapper fullwidthbanner-container tiny_bullet_slider" data-alias="classic4export" data-source="gallery" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
         <div id="irev-slider-4" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
             <ul>
-                <?php foreach ($APISlider as $slide) : ?>
+                <?php $i=1; foreach ($APISlider as $slide) : ?>
                 <!-- SLIDE  -->
-                <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300">
+                <li data-index="rs-<?= $i++; ?>" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300">
                     <!-- MAIN IMAGE -->
                     <img src="#" class="rev-slidebg" data-bgcolor='linear-gradient(90deg, #969593 0%, #0092e0 100%)' alt="transparent image">
                     <!-- LAYERS -->
@@ -100,6 +100,8 @@
     </div><!-- End .rev_slider_wrapper -->
 </section>
 <!-- End #home-slider -->
-<?= $this->include('apropos/home-valeur') ?>
 
 <?php echo $this->endSection();  ?>
+
+<?= $this->include('apropos/home-vision'); ?>
+<?= $this->include('apropos/home-valeur'); ?>

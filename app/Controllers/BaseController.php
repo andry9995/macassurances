@@ -56,6 +56,9 @@ class BaseController extends Controller
     
     protected $siteKey = null;
 
+
+    protected $token = null;
+
     /**
      * Constructor.
      *
@@ -73,13 +76,45 @@ class BaseController extends Controller
         // E.g.: $this->session = \Config\Services::session();
 
         $this->siteKey = '61f0e8a8c01a7';
+        
+        $this->token = 'dJfhYwdHxk9epUfytlGBLk9FSjIe0LrRf/tqfz22V5Q=';
 
         $this->data = [ 
             'page'  =>  '',
             'titre' =>  'MAC Assurances',
             'function' =>  'default'
         ];
-
         
+    }
+
+    public function getCurlData($url = '', $token = null)
+    {
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => $url,
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 30,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "GET",
+          CURLOPT_HTTPHEADER => array(
+            "x-auth-token: " .$token
+          ),
+        ));
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($err) 
+        {
+          return "cURL Error #:" . $err;
+        }else 
+        {
+          return json_decode($response);
+        }
     }
 }

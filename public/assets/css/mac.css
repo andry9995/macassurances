@@ -1,3 +1,7 @@
+body,section {
+    font-family: 'Fira Sans', sans-serif !important;
+}
+
 img.logo.logo-dark,
 img.logo-dark,
 img.logo-light {
