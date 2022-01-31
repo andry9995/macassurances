@@ -1,6 +1,3 @@
-<?= $this->extend('template/index') ?>
-
-<?= $this->section('content')  ?>
 <!--  Begin Home Contact -->
 <section id="contactus" class="section">
     <header class="container text-center">
@@ -52,4 +49,3 @@
     </div><!-- End .container -->
 </section>
 <!-- #End Home Contact -->
-<?= $this->endSection();  ?>

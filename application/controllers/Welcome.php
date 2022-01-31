@@ -71,7 +71,9 @@ class Welcome extends MY_Controller {
 		$this->layout->view('slider/home-slider', $this->data);
 		$this->layout->view('apropos/home-vision');
 		$this->layout->view('apropos/home-valeur');
+		$this->layout->view('services/home-service');
 		$this->layout->view('actualites/home-actualite');
-		$this->layout->views('services/home-service');
+		$this->layout->view('contact/home-agences');
+		$this->layout->views('contact/home-contact');
 	}
 }
