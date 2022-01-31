@@ -36,7 +36,27 @@ class Welcome extends MY_Controller {
 			'titre'	=> $this->layout->set_titre('Bienvenue')
 		];
 
-		$this->layout->view('welcome_message', $this->data);
+		/**
+         * APISlider
+         * Cette variable stock dans un tablau les sliders de l'accueil d'un site web, 
+         * Enregister dépuis Shissab System
+         * @return id, titre, sous_titre, img
+         * @var array
+         */
+
+        $this->data['APISlider'] = $this->getCurlData('http://shissabsysteme.com/api/siteweb/slider/list/'.$this->siteKey , $this->token);
+
+        /**
+         * APIActualités
+         * Cette variable stock dans un tablau les actualités d'un site web, 
+         * Enregister dépuis Shissab System
+         * @return id, titre, description, img
+         * @var array
+         */
+        
+        $this->data['APIActualites'] = $this->getCurlData('http://shissabsysteme.com/api/siteweb/actualite/list/'.$this->siteKey , $this->token);
+
+		$this->layout->view('slider/home-slider', $this->data);
 		$this->layout->views('partials/none');
 	}
 }
