@@ -1,12 +1,10 @@
-<?= $this->extend('template/index') ?>
-
-<?= $this->section('content')  ?>
 <!-- Begin Home valeur -->
 <section id="our-values">
-    <div class="row">
+    <div class="container-fluid">
+        <div class="row">
         <div class="col-lg-6">
             <div class="values-img wow fadeInLeftBig">
-                <img src="images/services/auto.jpg">
+                <img src="<?php echo base_url(); ?>assets/images/services/auto.jpg">
             </div>
         </div>
         <div class="col-lg-6">
@@ -29,6 +27,6 @@
             </div>
         </div>
     </div>
+    </div>
 </section>
 <!-- #End Home valeur -->
-<?= $this->endSection();  ?>

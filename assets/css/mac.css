@@ -131,13 +131,13 @@ section#our-vision {
 	width: 100%;
 }
 
-#our-values .row,
+#our-values,
 .bg-mac{
 	background: #0092e0;
 }
 
 .values-desc {
-	margin: 5rem;
+	padding: 6rem;
 }
 
 article.article.wow {

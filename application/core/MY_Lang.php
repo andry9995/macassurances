@@ -93,7 +93,7 @@ class MY_Lang extends CI_Lang {
 	 *
 	 * @return	void|string[]	Array containing translations, if $return is set to TRUE
 	 */
-	public function load($langfile, $idiom = '', $return = FALSE, $add_suffix = TRUE, $alt_path = '')
+	public function load($langfile, $idiom = 'french', $return = FALSE, $add_suffix = TRUE, $alt_path = '')
 	{
 		if (is_array($langfile))
 		{

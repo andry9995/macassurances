@@ -56,7 +56,22 @@ class Welcome extends MY_Controller {
         
         $this->data['APIActualites'] = $this->getCurlData('http://shissabsysteme.com/api/siteweb/actualite/list/'.$this->siteKey , $this->token);
 
+        /**
+         * APIServices
+         * Cette variable stock dans un tablau les services d'un site web, 
+         * Enregister dépuis Shissab System
+         * @return id, nom, description, img
+         * @var array
+         */
+        
+        $this->data['APIServices'] = $this->getCurlData('http://shissabsysteme.com/api/siteweb/produit/list/'.$this->siteKey , $this->token);
+
+        //var_dump($this->data['APIServices']);
+
 		$this->layout->view('slider/home-slider', $this->data);
-		$this->layout->views('partials/none');
+		$this->layout->view('apropos/home-vision');
+		$this->layout->view('apropos/home-valeur');
+		$this->layout->view('actualites/home-actualite');
+		$this->layout->views('services/home-service');
 	}
 }
