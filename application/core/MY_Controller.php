@@ -40,6 +40,8 @@ class MY_Controller extends CI_Controller
 		$this->load->helper('assets');
 		$this->load->helper('url');
 
+		//coucou
+
 		setlocale(LC_TIME, 'fr');
 
 		$this->siteKey = '61f0e8a8c01a7';
