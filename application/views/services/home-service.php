@@ -24,8 +24,6 @@
                 </li>
                 <?php endforeach; ?>
             </ul><!-- End #portfolio-item-container -->
-
-            
         </div><!-- End .portfolio-wrapper -->
     </div>
 </section>
