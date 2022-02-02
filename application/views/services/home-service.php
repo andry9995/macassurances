@@ -13,13 +13,13 @@
                             <div class="portfolio-item-wrapper">
                                 <img src="<?= $service->img; ?>" alt="Image de : <?= $service->nom; ?>">
                                 <div class="portfolio-overlay overlay-yellow">
-                                    <a href="<?= site_url('services/signleservice'); ?>" title="Plus d'informations sur : <?= $service->nom; ?>" class="open-btn"></a>
-                                    <h2 class="portfolio-title"><a href="<?= site_url('services/signleservice'); ?>" title="<?= $service->nom; ?>"><?= $service->nom; ?></a></h2>
+                                    <a href="<?php echo site_url('services/show/' . $service->id) ?>" title="Plus d'informations sur : <?= $service->nom; ?>" class="open-btn"></a>
+                                    <h2 class="portfolio-title"><a href="<?php echo site_url('services/show/' . $service->id) ?>" title="<?= $service->nom; ?>"><?= $service->nom; ?></a></h2>
                                 </div><!-- End .portfolio-overlay -->
                             </div><!-- End .portfolio-item-wrapper -->
                             <div class="portfolio-item-title">
                                 <h4>
-                                    <a href="single-service.html"><?= $service->nom; ?></a>
+                                    <a href="<?php echo site_url('services/show/' . $service->id) ?>"><?= $service->nom; ?></a>
                                 </h4>
                             </div>
                         </li>

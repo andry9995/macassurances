@@ -3,13 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Services extends MY_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+	}
 	
 	/**
 	 * { function_description }
 	 */
 	public function index()
 	{
-		$this->data['titre'] = $this->layout->set_titre('Bienvenue');
+		$this->data['titre'] = $this->layout->set_titre('Nos Produits');
 
 
         /**
@@ -25,6 +29,18 @@ class Services extends MY_Controller {
         //var_dump($this->data['APIServices']);
 
 		$this->layout->view('services/service', $this->data);
+		$this->layout->views('partials/none');
+	}
+
+	public function show($id)
+	{
+		$service = $this->shissab->produit($id);
+
+		$this->data['service'] = $service;
+		
+		$this->data['titre'] = $this->layout->set_titre($service->nom);
+
+		$this->layout->view('services/show', $this->data);
 		$this->layout->views('partials/none');
 	}
 }
