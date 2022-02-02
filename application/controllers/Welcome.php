@@ -19,6 +19,11 @@ class Welcome extends MY_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
+	public function __construct()
+	{
+		parent::__construct();
+	}
+
 	/**
 	 * { function_description }
 	 */
@@ -32,11 +37,7 @@ class Welcome extends MY_Controller {
 	 */
 	public function home()
 	{
-		$this->data = [
-			'titre'	=> $this->layout->set_titre('Accueil')
-		];
-
-        $this->data['apropos'] = $this->shissab->apropos();
+		$this->data['titre'] = $this->layout->set_titre('Accueil');
 
 		/**
          * APISlider

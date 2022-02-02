@@ -15,19 +15,6 @@ class MY_Controller extends CI_Controller
      */
     public $data = [];
 
-    /**
-     * Clé de l'API
-     * Cette clé permettra de bien cibler le site web que nous voulons 
-     * Acceder aux données
-     * 
-     * @var string
-     */
-    
-    protected $siteKey = null;
-
-
-    protected $token = null;
-
 	/**
 	 * Constructs a new instance.
 	 */
@@ -41,12 +28,6 @@ class MY_Controller extends CI_Controller
 		$this->load->helper('assets');
 		$this->load->helper('url');
 
-		$api = $this->load->config('api.config');
-
-		$this->siteKey = $this->config->item('sitekey');
-		
-        $this->token = $this->config->item('token');
-
 		setlocale(LC_TIME, 'fr');
 
         $this->data = [ 
@@ -55,11 +36,12 @@ class MY_Controller extends CI_Controller
             'function' =>  $this->get_instance()->router->fetch_method()
         ];
 
+		$this->data['apropos'] = $this->shissab->apropos();
+		
 		$this->data['css'] = array();
 		$this->data['js'] = array();
 		
 		$this->data['breadcrumb'] = '';
-
 		
 		$message_flaches = array();
 
@@ -74,37 +56,6 @@ class MY_Controller extends CI_Controller
 	public function breadcrumb(){
 		$this->layout->view('inc/breadcrumb',$this->data);
 	}
-
-	public function getCurlData($url = '', $token = null)
-    {
-        $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-          CURLOPT_URL => $url,
-          CURLOPT_RETURNTRANSFER => true,
-          CURLOPT_ENCODING => "",
-          CURLOPT_MAXREDIRS => 10,
-          CURLOPT_TIMEOUT => 30,
-          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-          CURLOPT_CUSTOMREQUEST => "GET",
-          CURLOPT_HTTPHEADER => array(
-            "x-auth-token: " .$token
-          ),
-        ));
-
-        $response = curl_exec($curl);
-        $err = curl_error($curl);
-
-        curl_close($curl);
-        
-        if ($err) 
-        {
-          return "cURL Error #:" . $err;
-        }else 
-        {
-          return json_decode($response);
-        }
-    }
 
 	/**
 	 * { function_description }
