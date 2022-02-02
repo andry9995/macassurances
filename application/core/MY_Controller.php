@@ -36,12 +36,15 @@ class MY_Controller extends CI_Controller
 		parent::__construct();
 		//$this->output->enable_profiler(TRUE);
 		$this->load->library('layout');
+		$this->load->library('shissab');
 		$this->load->helper('date');
 		$this->load->helper('assets');
 		$this->load->helper('url');
 
 		$api = $this->load->config('api.config');
-		$this->siteKey = $this->config->item('site_key');
+
+		$this->siteKey = $this->config->item('sitekey');
+		
         $this->token = $this->config->item('token');
 
 		setlocale(LC_TIME, 'fr');

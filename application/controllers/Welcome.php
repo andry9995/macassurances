@@ -33,8 +33,10 @@ class Welcome extends MY_Controller {
 	public function home()
 	{
 		$this->data = [
-			'titre'	=> $this->layout->set_titre('Bienvenue')
+			'titre'	=> $this->layout->set_titre('Accueil')
 		];
+
+        $this->data['apropos'] = $this->shissab->apropos();
 
 		/**
          * APISlider
@@ -44,7 +46,8 @@ class Welcome extends MY_Controller {
          * @var array
          */
 
-        $this->data['APISlider'] = $this->getCurlData('http://shissabsysteme.com/api/siteweb/slider/list/'.$this->siteKey , $this->token);
+
+        $this->data['APISlider'] = $this->shissab->sliders();
 
         /**
          * APIActualités
@@ -54,7 +57,7 @@ class Welcome extends MY_Controller {
          * @var array
          */
         
-        $this->data['APIActualites'] = $this->getCurlData('http://shissabsysteme.com/api/siteweb/actualite/list/'.$this->siteKey , $this->token);
+        $this->data['APIActualites'] = $this->shissab->actualites();
 
         /**
          * APIServices
@@ -64,7 +67,7 @@ class Welcome extends MY_Controller {
          * @var array
          */
         
-        $this->data['APIServices'] = $this->getCurlData('http://shissabsysteme.com/api/siteweb/produit/list/'.$this->siteKey , $this->token);
+        $this->data['APIServices'] = $this->shissab->produits();
 
         //var_dump($this->data['APIServices']);
 

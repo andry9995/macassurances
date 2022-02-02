@@ -1,6 +1,5 @@
 <!-- Begin Home valeur -->
 <section id="our-values">
-    <div class="container-fluid">
         <div class="row">
         <div class="col-lg-6">
             <div class="values-img wow fadeInLeftBig">
@@ -26,7 +25,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </section>
 <!-- #End Home valeur -->

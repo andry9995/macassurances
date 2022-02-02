@@ -4,6 +4,8 @@
  * API SHISSAB Config
  */
 
-$config['site_key'] = '61f0e8a8c01a7';
+$config['sitekey'] = '61f02e33448d6';
 
-$config['token'] = 'dJfhYwdHxk9epUfytlGBLk9FSjIe0LrRf/tqfz22V5Q=';
+$config['token'] = 'ww+htFuMRMA/UkF0FryhNhSmMIHUecuAP7L8sDCe1yA=';
+
+$config['endpoint'] = 'http://shissabsysteme.com/api/siteweb/';

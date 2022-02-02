@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <title><?php echo $titre; ?> | MAC Assurances</title>
-    <meta name="description" content="MAC Mutuelle d'assurances Comores">
-    <meta name="Hikam Société Multiple" content="Eon">
+    <title><?php echo $titre; ?> | <?php echo $apropos->titre ?></title>
+    <meta name="description" content="MAC Mutuelle d'Assurances Comores">
+    <meta name="author" content="mac assurances">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Fonts -->
@@ -14,7 +15,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.css">
 
@@ -30,55 +31,19 @@
 
     <!-- Favicon and Apple Icons -->
     <link rel="shortcut icon" href="<?php echo base_url(); ?>favicon.ico">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9Y398Z1E7"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-D9Y398Z1E7');
-    </script>
 
     <?php foreach ($css as $css) : ?>
         <link rel="stylesheet" href="<?php echo $css; ?>">
     <?php endforeach; ?>
 </head>
-<body>
 
+<body data-spy="scroll" data-bs-spy="scroll" data-bs-target="#main-menu">
     <div id="wrapper">
         <header id="header">
-            <!-- <div class="contact-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 contact-container-flex">
-                            <div class="contact-item">
-                                <span>
-                                    <i class="fa fa-map-marker-alt"></i>
-                                    Moroni Philips Grande Comores
-                                </span>
-                            </div>
-                            <div class="contact-item">
-                                <span>
-                                    <i class="fa fa-phone"></i>
-                                    +(269) 359 2414
-                                </span>
-                            </div>
-                            <div class="contact-item">
-                                <span>
-                                    <i class="fa fa-envelope"></i>
-                                    mac.assurances@gmail.com
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <nav class="navbar navbar-light navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand navbar-brand-img" href="index.html">
-                        <img src="<?php echo base_url(); ?>assets/images/logo-white.png" class="logo logo-light" alt="logo">
-                        <img src="<?php echo base_url(); ?>assets/images/logo.png" class="logo logo-dark" alt="logo">
+                        <img src="<?php echo $apropos->logo; ?>" class="logo logo-dark" alt="logo">
                     </a>
 
                     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -125,7 +90,7 @@
                             <div class="contact-info-box text-center">
                                 <span class="contact-info-icon yellowbg"><i class="fas fa-map-marked-alt"></i></span>
                                 <ul class="contact-info-list">
-                                    <li>Moroni Philips Grande Comores</li>
+                                    <li><?php echo $apropos->adresse ?></li>
                                 </ul>
                             </div><!-- End .contact-info-box -->
                         </div><!-- End .col-lg-4 -->
@@ -134,7 +99,7 @@
                             <div class="contact-info-box text-center">
                                 <span class="contact-info-icon lightbluebg"><i class="fas fa-mobile-alt"></i></span>
                                 <ul class="contact-info-list">
-                                    <li><a href="tel:#">+(269) 359 2414</a></li>
+                                    <li><a href="tel:#"><?php echo $apropos->tel_mobile ?></a></li>
                                 </ul>
                             </div><!-- End .contact-info-box -->
                         </div><!-- End .col-lg-4 -->
@@ -143,7 +108,7 @@
                             <div class="contact-info-box text-center">
                                 <span class="contact-info-icon redbg"><i class="far fa-envelope"></i></span>
                                 <ul class="contact-info-list">
-                                    <li><a href="mailto:#">mac.assurances@gmail.com</a></li>
+                                    <li><a href="mailto:<?php echo $apropos->email ?>"><?php echo $apropos->email ?></a></li>
                                 </ul>
                             </div><!-- End .contact-info-box -->
                         </div><!-- End .col-lg-4 -->
