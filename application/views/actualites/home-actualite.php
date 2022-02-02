@@ -20,20 +20,20 @@
                         <article class="article yellow wow fadeInUpBig">
                             <span class="article-timeline-date" data-bs-toggle="tooltip" data-bg-placement="top" title="<?= $actualite->date; ?>"></span>
                             <figure class="article-media-container">
-                                <a href="#">
+                                <a href="<?php echo site_url('actualites/show/' . $actualite->id) ?>">
                                     <img src="<?= $actualite->img; ?>" alt="<?= $actualite->titre; ?>">
                                 </a>
                             </figure><!-- End .article-media-container -->
                             <div class="article-meta-container">
-                                <h2><a href="#" title=""><?= $actualite->titre; ?></a></h2>
+                                <h2><a href="<?php echo site_url('actualites/show/' . $actualite->id) ?>" title=""><?= $actualite->titre; ?></a></h2>
                                 <p>
                                     <?= substr($actualite->description, 0, 140); ?> [...]
-                                    <a href="#" class="readmore" title="">Voir plus</a>
+                                    <a href="<?php echo site_url('actualites/show/' . $actualite->id) ?>" class="readmore" title="">Voir plus</a>
                                 </p>
                                 <div class="article-meta clearfix">
                                     <div class="article-meta-box article-author"><?= $actualite->date; ?></div>
                                     <div class="article-meta-box article-comments">
-                                        <a href="#" title="">Afficher</a>
+                                        <a href="<?php echo site_url('actualites/show/' . $actualite->id) ?>" title="">Afficher</a>
                                     </div>
                                 </div><!-- End .article-meta -->
                             </div><!-- End .article-meta-container -->

@@ -23,13 +23,13 @@ class Actualites extends MY_Controller {
 
 	public function show($id)
 	{
-		$service = $this->shissab->produit($id);
+		$actualite = $this->shissab->actualite($id);
 
-		$this->data['service'] = $service;
+		$this->data['actualite'] = $actualite;
 		
-		$this->data['titre'] = $this->layout->set_titre($service->nom);
+		$this->data['titre'] = $this->layout->set_titre($actualite->titre);
 
-		$this->layout->view('services/show', $this->data);
+		$this->layout->view('actualites/show', $this->data);
 		$this->layout->views('partials/none');
 	}
 }
