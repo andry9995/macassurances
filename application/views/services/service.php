@@ -1,17 +1,17 @@
 <!-- Begin Home Produit -->
-<div class="position-relative overflow-hidden p-3 p-md-5 text-center text-light bg-mac">
-  <div class="col-md-5 p-lg-5 mx-auto my-5">
-    <h1 class="display-4 font-weight-normal text-light">Nos services</h1>
-    <p class="lead font-weight-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple's marketing pages.
-        
-        <p>
-            <a class="btn px-auto btn-primary" href="<?php echo base_url(); ?>">Home</a> <span class="px-3">/</span> <a class="btn px-auto btn-primary active" href="<?php echo site_url('services'); ?>">Services</a>
-        </p>
-    </p>
-    <a class="btn btn-primary rounded-circle mt-4" href="#"><i class="fa fa-arrow-down"></i></a>
-  </div>
-  <div class="product-device box-shadow d-none d-md-block"></div>
-  <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+<div class="page-header parallax bg-mac">
+    <div class="container">
+        <div class="page-header-wrapper">
+            <h1 class="page-title">Nos produits</h1>
+            <span class="breadcrumb-mac">
+                <a class="text-white" href="<?php echo base_url(); ?>">Accueil</a> 
+                <span class="text-white"><i class="fa fa-angle-right"></i></span> 
+                <span>Nos produits</span>
+            </span>
+        </div>
+    </div>
+    <div class="product-device box-shadow d-none d-md-block"></div>
+    <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
 </div>
 
 </section>

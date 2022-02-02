@@ -250,3 +250,7 @@ article.article.wow {
 }
 
 .overflow-hidden { overflow: hidden; }
+
+.breadcrumb-mac{
+    font-size: 20px;
+}
