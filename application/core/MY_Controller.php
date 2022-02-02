@@ -40,13 +40,11 @@ class MY_Controller extends CI_Controller
 		$this->load->helper('assets');
 		$this->load->helper('url');
 
-		//coucou
+		$api = $this->load->config('api.config');
+		$this->siteKey = $this->config->item('site_key');
+        $this->token = $this->config->item('token');
 
 		setlocale(LC_TIME, 'fr');
-
-		$this->siteKey = '61f0e8a8c01a7';
-        
-        $this->token = 'dJfhYwdHxk9epUfytlGBLk9FSjIe0LrRf/tqfz22V5Q=';
 
         $this->data = [ 
             'page'  =>  $this->get_instance()->router->fetch_class(),
