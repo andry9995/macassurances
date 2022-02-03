@@ -877,7 +877,7 @@
 				position: new google.maps.LatLng(locations[i][1], locations[i][2]),
 				map: map,
 				animation: google.maps.Animation.DROP,
-				icon: 'images/pin.png',
+				icon: 'assets/images/pin.png',
 			});
 
 			google.maps.event.addListener(marker, 'click', (function(marker, i) {
