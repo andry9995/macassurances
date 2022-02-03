@@ -9,11 +9,10 @@ class Layout {
 	private $data = array();
 	private $theme = 'index';
 
-	/*
-	|=============================================================================== |
-	Constructeur
-	|===============================================================================
-	*/  
+ 
+	/**
+	 * Constructs a new instance.
+	 */
 	public function __construct() {  
 		$this->CI = get_instance();
 		$this->data['output'] = '';
@@ -30,15 +29,13 @@ class Layout {
 		$this->data['js'] = array(); 
 	} 
 
-	 /*
-	  |=============================================================================== |
-	  Méthodes pour presonaliser les dates
-	  |===============================================================================
-	  
-	  @param      <type>  $datein  The datein
-	  
-	  @return     string  ( description_of_the_return_value )
-	  */ 
+	/**
+	 * { function_description }
+	 *
+	 * @param      <type>  $datein  The datein
+	 *
+	 * @return     string  ( description_of_the_return_value )
+	 */
 	public function newdate($datein){
 		$date = $datein;
 		$time = unix_to_human(time());
@@ -75,14 +72,12 @@ class Layout {
 		return $d;
 	}
 
-	/*
-	  |=============================================================================== |
-	  Méthodes pour charger les vues | . view | . views
-	  |===============================================================================
-	  
-	  @param      <type>  $name   The name
-	  @param      array   $data   The data
-	  */  
+	/**
+	 * { function_description }
+	 *
+	 * @param      <type>  $name   The name
+	 * @param      array   $data   The data
+	 */
 	public function view($name, $data = array()) {
 		$this->output .= $this->CI->load->view($name, $data, true); 
 		//$this->CI->load->view('../themes/' . $this->theme, $this->data);
@@ -100,16 +95,14 @@ class Layout {
 		$this->CI->load->view('../themes/'. $this->theme, array('output' => $this->output));
 	} 
 
-	/*
-	 |=============================================================================== |
-	 Méthodes pour modifier les dataiables envoyées au layout | . set_titre | .
-	 set_charset
-	 |===============================================================================
-	 
-	 @param      <type>   $titre  The titre
-	 
-	 @return     boolean  ( description_of_the_return_value )
-	 */ 
+ 
+	/**
+	 * Sets the titre.
+	 *
+	 * @param      <type>  $titre  The titre
+	 *
+	 * @return     bool    ( description_of_the_return_value )
+	 */
 	public function set_titre($titre) { 
 		if(is_string($titre) AND !empty($titre)) {  
 			$this->data['titre'] = $titre;
@@ -118,17 +111,14 @@ class Layout {
 	 	return false; 
 	}
 
-	/*
-	 *|=============================================================================== |
-	 Méthodes pour ajouter des feuilles de CSS et de JavaScript | . add_css | .
-	 ajouter_js
-	 *===============================================================================
+
+	/**
+	 * Adds a css.
 	 *
+	 * @param      string  $nom    The nom
 	 *
-	 * @param      string   $nom    The nom
-	 *
-	 * @return     boolean  ( description_of_the_return_value )
-	 */ 
+	 * @return     bool    ( description_of_the_return_value )
+	 */
 	public function add_css($nom) { 
 		if(is_string($nom) AND !empty($nom) AND file_exists('./assets/' . $nom . '.css')) {  
 			$this->data['css'][] = css_url($nom);
