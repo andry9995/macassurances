@@ -11,7 +11,7 @@
                     <?php if ($key < 3): ?>
                         <li class="portfolio-item animate-item photography" data-animate-time="80">
                             <div class="portfolio-item-wrapper">
-                                <img src="<?= $service->img; ?>" alt="Image de : <?= $service->nom; ?>">
+                                <img src="<?php echo $service->img ?>" alt="Image de : <?= $service->nom; ?>">
                                 <div class="portfolio-overlay overlay-yellow">
                                     <a href="<?php echo site_url('services/show/' . $service->id) ?>" title="Plus d'informations sur : <?= $service->nom; ?>" class="open-btn"></a>
                                     <h2 class="portfolio-title"><a href="<?php echo site_url('services/show/' . $service->id) ?>" title="<?= $service->nom; ?>"><?= $service->nom; ?></a></h2>

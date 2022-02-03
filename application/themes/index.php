@@ -30,7 +30,7 @@
     <!-- <script src="<?php echo base_url(); ?>assets/js/pace.min.js"></script> -->
 
     <!-- Favicon and Apple Icons -->
-    <link rel="shortcut icon" href="<?php echo base_url(); ?>favicon.ico">
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/favicon.ico">
 
     <?php foreach ($css as $css) : ?>
         <link rel="stylesheet" href="<?php echo $css; ?>">
@@ -161,7 +161,7 @@
 
     <script src="<?php echo base_url(); ?>assets/js/main.js"></script>
 
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
     <script>
         var revapi;
 
@@ -265,6 +265,6 @@
     <?php foreach ($js as $js) : ?>
         <link rel="stylesheet" href="<?php echo $js; ?>">
     <?php endforeach; ?>
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
 </body>
 </html>
