@@ -34,6 +34,9 @@ class Shissab
 	 */
 	private $endpoint;
 
+	/**
+	 * Constructs a new instance.
+	 */
 	function __construct()
 	{
 		$this->CI = get_instance();
@@ -47,8 +50,8 @@ class Shissab
 
 	/**
 	 * Details
-	 * 
-	 * @return array
+	 *
+	 * @return     array
 	 */
 	public function details()
 	{
@@ -57,8 +60,8 @@ class Shissab
 
 	/**
 	 * A propos
-	 * 
-	 * @return array
+	 *
+	 * @return     array
 	 */
 	public function apropos()
 	{
@@ -67,8 +70,8 @@ class Shissab
 
 	/**
 	 * Liste des sliders
-	 * 
-	 * @return array
+	 *
+	 * @return     array
 	 */
 	public function sliders()
 	{
@@ -77,8 +80,8 @@ class Shissab
 
 	/**
 	 * Liste des produits
-	 * 
-	 * @return array
+	 *
+	 * @return     array
 	 */
 	public function produits()
 	{
@@ -87,8 +90,10 @@ class Shissab
 
 	/**
 	 * Details du produit
-	 * 
-	 * @return array
+	 *
+	 * @param      <type>  $id     The identifier
+	 *
+	 * @return     array
 	 */
 	public function produit($id)
 	{
@@ -97,8 +102,8 @@ class Shissab
 
 	/**
 	 * Liste des actualités
-	 * 
-	 * @return array
+	 *
+	 * @return     array
 	 */
 	public function actualites()
 	{
@@ -107,8 +112,10 @@ class Shissab
 
 	/**
 	 * Details de l'actualité
-	 * 
-	 * @return array
+	 *
+	 * @param      <type>  $id     The identifier
+	 *
+	 * @return     array
 	 */
 	public function actualite($id)
 	{
@@ -117,8 +124,8 @@ class Shissab
 
 	/**
 	 * Liste des membres
-	 * 
-	 * @return array
+	 *
+	 * @return     array
 	 */
 	public function membres()
 	{
@@ -127,8 +134,10 @@ class Shissab
 
 	/**
 	 * Details du membre
-	 * 
-	 * @return array
+	 *
+	 * @param      <type>  $id     The identifier
+	 *
+	 * @return     array
 	 */
 	public function membre($id)
 	{
@@ -138,8 +147,8 @@ class Shissab
 
 	/**
 	 * Liste des bureaux
-	 * 
-	 * @return array
+	 *
+	 * @return     array
 	 */
 	public function bureaux()
 	{
@@ -148,8 +157,10 @@ class Shissab
 
 	/**
 	 * Details du bureau
-	 * 
-	 * @return array
+	 *
+	 * @param      <type>  $id     The identifier
+	 *
+	 * @return     array
 	 */
 	public function bureau($id)
 	{
@@ -159,8 +170,8 @@ class Shissab
 
 	/**
 	 * Liste des sections
-	 * 
-	 * @return array
+	 *
+	 * @return     array
 	 */
 	public function sections()
 	{
@@ -169,36 +180,41 @@ class Shissab
 
 	/**
 	 * Curl get
+	 *
+	 * @param      string  $resource    The resource
+	 * @param      <type>  $attributes  The attributes
+	 *
+	 * @return     string  ( description_of_the_return_value )
 	 */
 	public function get($resource, $attributes)
 	{
-        $curl = curl_init();
+    $curl = curl_init();
 
-        curl_setopt_array($curl, array(
-          CURLOPT_URL => $this->endpoint . $resource . '/' .implode('/', $attributes),
-          CURLOPT_RETURNTRANSFER => true,
-          CURLOPT_ENCODING => "",
-          CURLOPT_MAXREDIRS => 10,
-          CURLOPT_TIMEOUT => 30,
-          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-          CURLOPT_CUSTOMREQUEST => "GET",
-          CURLOPT_HTTPHEADER => array(
-            "x-auth-token: " . $this->token
-          ),
-        ));
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => $this->endpoint . $resource . '/' .implode('/', $attributes),
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_ENCODING => "",
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 30,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => "GET",
+      CURLOPT_HTTPHEADER => array(
+        "x-auth-token: " . $this->token
+      ),
+    ));
 
-        $response = curl_exec($curl);
-        $err = curl_error($curl);
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
 
-        curl_close($curl);
-        
-        if ($err) 
-        {
-          return "cURL Error #:" . $err;
-        }else 
-        {
-          return json_decode($response);
-        }
+    curl_close($curl);
+    
+    if ($err) 
+    {
+      return "cURL Error #:" . $err;
+    }else 
+    {
+      return json_decode($response);
+    }
 	}
 
 	/**
@@ -209,4 +225,5 @@ class Shissab
 	{
 		// code...
 	}
+
 }

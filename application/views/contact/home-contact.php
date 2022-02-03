@@ -15,7 +15,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-lg-8">
                         <!-- <h2 class="text-center lg-margin">Entrer en contact</h2> -->
-                        <form action="#" id="contact-form" method="post" novalidate>
+                        <form action="<?php echo site_url('welcome/post'); ?>" id="contact-form" method="post" novalidate>
                             <div class="form-group">
                                 <input type="text" name="contactname" id="contactname" required class="form-control form-control-lg">
                                 <label for="contactname" class="animated-label">Nom *</label>
