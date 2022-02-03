@@ -18,6 +18,7 @@ class Histoire extends MY_Controller {
         $this->data['membres'] = $this->shissab->membres();
 
 		$this->layout->view('histoire/index', $this->data);
+		$this->layout->view('contact/home-contact');
 		$this->layout->views('partials/none');
 	}
 }

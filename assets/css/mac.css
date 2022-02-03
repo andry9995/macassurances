@@ -202,7 +202,7 @@ article.article.wow {
   width: 300px;
   height: 540px;
   background-color: #333;
-  border-radius: 21px;
+  /*border-radius: 21px;*/
   -webkit-transform: rotate(30deg);
   transform: rotate(30deg);
 }
@@ -215,7 +215,7 @@ article.article.wow {
   left: 10px;
   content: "";
   background-color: rgba(255, 255, 255, .1);
-  border-radius: 5px;
+  /*border-radius: 5px;*/
 }
 
 .product-device-2 {
