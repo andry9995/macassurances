@@ -72,7 +72,8 @@ class Welcome extends MY_Controller {
         
         $this->data['APIServices'] = $this->shissab->produits();
 
-        //var_dump($this->data['APIServices']);
+        $this->data['bureaux'] = (array)$this->shissab->bureaux();
+
 
 		$this->layout->view('slider/home-slider', $this->data);
 		$this->layout->view('apropos/home-vision');
