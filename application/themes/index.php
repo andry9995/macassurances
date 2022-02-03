@@ -62,11 +62,11 @@
                                 <a class="nav-link" href="<?php echo site_url('services'); ?>">Nos Produits</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo site_url('agences/agences'); ?>">Réseau et Contact</a>
+                                <a class="nav-link" href="<?php echo site_url('agences'); ?>">Réseau et Contact</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="#portfolio">Devis</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">À Propos</a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
