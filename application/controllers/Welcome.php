@@ -1,6 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * This class describes a welcome.
+ */
 class Welcome extends MY_Controller {
 
 	/**
@@ -19,6 +22,9 @@ class Welcome extends MY_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
+	/**
+	 * Constructs a new instance.
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -85,10 +91,11 @@ class Welcome extends MY_Controller {
 		$this->layout->views('contact/home-contact');
 	}
 
+	/**
+	 * { function_description }
+	 */
 	public function post()
 	{
-		echo "ça marche";
-
 		if ($this->input->post()) {
 			
 			$this->sendMail(
@@ -97,11 +104,17 @@ class Welcome extends MY_Controller {
 				$this->input->post('contactemail')
 			);
 		}
-		die();
 	}
 
 
-	public function sendMail($subject="", $message="", $to="")
+	/**
+	 * Sends a mail.
+	 *
+	 * @param      string  $subject  The subject
+	 * @param      string  $message  The message
+	 * @param      string  $from     The from
+	 */
+	public function sendMail($subject="", $message="", $from="")
 	{
 		$this->load->library('email');
 
@@ -121,8 +134,8 @@ class Welcome extends MY_Controller {
 
 		$this->email->set_newline("\r\n");
 		$this->email->set_crlf("\r\n");
-		$this->email->from("hikam.test.email@gmail.com");
-		$this->email->to($to);
+		$this->email->from($from);
+		$this->email->to("hikam.test.email@gmail.com");
 		$this->email->subject($subject);
 		$this->email->message($message);
 		
@@ -134,6 +147,9 @@ class Welcome extends MY_Controller {
 		}
 	}
 
+	/**
+	 * { function_description }
+	 */
 	public function emailSuccess()
 	{
 		$this->data['titre'] = $this->layout->set_titre('Email envoyé avec succés');
@@ -143,6 +159,9 @@ class Welcome extends MY_Controller {
 		$this->layout->views('partials/none');
 	}
 
+	/**
+	 * { function_description }
+	 */
 	public function emailFailed()
 	{
 		$this->data['titre'] = $this->layout->set_titre('Envoie échoué');
