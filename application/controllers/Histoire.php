@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Agences extends MY_Controller {
+class Histoire extends MY_Controller {
 
 	public function __construct()
 	{
@@ -13,11 +13,11 @@ class Agences extends MY_Controller {
 	 */
 	public function index()
 	{
-		$this->data['titre'] = $this->layout->set_titre('Réseaux & Contact');
+		$this->data['titre'] = $this->layout->set_titre('Notre histoire');
 
-        $this->data['bureaux'] = $this->shissab->bureaux();
+        $this->data['membres'] = $this->shissab->membres();
 
-		$this->layout->view('agences/index', $this->data);
+		$this->layout->view('histoire/index', $this->data);
 		$this->layout->views('partials/none');
 	}
 }

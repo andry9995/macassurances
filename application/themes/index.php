@@ -70,7 +70,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">À Propos</a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="about.html">Notre Histroire</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo site_url('histoire'); ?>">Notre Histroire</a></li>
                                     <li><a class="dropdown-item" href="<?php echo site_url('actualites'); ?>">Nos Actus</a></li>
                                 </ul>
                             </li>
