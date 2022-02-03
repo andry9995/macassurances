@@ -39,6 +39,9 @@ class Welcome extends MY_Controller {
 	{
 		$this->data['titre'] = $this->layout->set_titre('Accueil');
 
+
+        $this->data['sections'] = (array)$this->shissab->sections();
+
 		/**
          * APISlider
          * Cette variable stock dans un tablau les sliders de l'accueil d'un site web, 
@@ -46,7 +49,6 @@ class Welcome extends MY_Controller {
          * @return id, titre, sous_titre, img
          * @var array
          */
-
 
         $this->data['APISlider'] = $this->shissab->sliders();
 

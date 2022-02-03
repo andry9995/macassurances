@@ -135,6 +135,38 @@ class Shissab
 		return $this->get("membre/details", [$id]);
 	}
 
+
+	/**
+	 * Liste des bureaux
+	 * 
+	 * @return array
+	 */
+	public function bureaux()
+	{
+		return $this->get("bureau/list", [$this->sitekey]);
+	}
+
+	/**
+	 * Details du bureau
+	 * 
+	 * @return array
+	 */
+	public function bureau($id)
+	{
+		return $this->get("bureau/details", [$id]);
+	}
+
+
+	/**
+	 * Liste des sections
+	 * 
+	 * @return array
+	 */
+	public function sections()
+	{
+		return $this->get("sections", [$this->sitekey]);
+	}
+
 	/**
 	 * Curl get
 	 */
