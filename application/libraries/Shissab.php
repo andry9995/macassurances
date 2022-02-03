@@ -179,6 +179,16 @@ class Shissab
 	}
 
 	/**
+	 * Liste des customers
+	 *
+	 * @return     array
+	 */
+	public function customers()
+	{
+		return $this->get("customer/list", [$this->sitekey]);
+	}
+
+	/**
 	 * Curl get
 	 *
 	 * @param      string  $resource    The resource

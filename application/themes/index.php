@@ -32,6 +32,12 @@
     <!-- Favicon and Apple Icons -->
     <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/favicon.ico">
 
+    <!-- carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+
+
     <?php foreach ($css as $css) : ?>
         <link rel="stylesheet" href="<?php echo $css; ?>">
     <?php endforeach; ?>
@@ -265,6 +271,50 @@
     <?php foreach ($js as $js) : ?>
         <link rel="stylesheet" href="<?php echo $js; ?>">
     <?php endforeach; ?>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            if($('.brands_slider').length)
+            {
+                var brandsSlider = $('.brands_slider');
+
+                brandsSlider.owlCarousel(
+                {
+                    loop:true,
+                    autoplay:true,
+                    autoplayTimeout:5000,
+                    nav:false,
+                    dots:false,
+                    autoWidth:true,
+                    items:8,
+                    margin:100
+                });
+
+                if($('.brands_prev').length)
+                {
+                    var prev = $('.brands_prev');
+                    prev.on('click', function()
+                    {
+                        brandsSlider.trigger('prev.owl.carousel');
+                    });
+                }
+
+                if($('.brands_next').length)
+                {
+                    var next = $('.brands_next');
+                    next.on('click', function()
+                    {
+                        brandsSlider.trigger('next.owl.carousel');
+                    });
+                }
+            }
+
+
+            });
+    </script>
 
 </body>
 </html>

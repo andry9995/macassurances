@@ -44,6 +44,8 @@ class Welcome extends MY_Controller {
 
         $this->data['sections'] = (array)$this->shissab->sections();
 
+        $this->data['customers'] = (array)$this->shissab->customers();
+
 		/**
          * APISlider
          * Cette variable stock dans un tablau les sliders de l'accueil d'un site web, 
@@ -82,6 +84,7 @@ class Welcome extends MY_Controller {
 		$this->layout->view('services/home-service');
 		$this->layout->view('actualites/home-actualite');
 		$this->layout->view('contact/home-agences');
+		$this->layout->view('contact/home-customers');
 		$this->layout->views('contact/home-contact');
 	}
 
