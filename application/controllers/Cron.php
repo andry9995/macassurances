@@ -81,19 +81,14 @@ class Cron extends MY_Controller {
 		        		$this->$model 
 		        	);
 		        }
+
+		        $this->trigger_delete($entity);
+
 			} else {
         		$this->fetch($data, $this->$model);
 			}
 			
 		}
-	}
-
-	public function apropos()
-	{
-
-        $apropos = (array)$this->shissab->apropos();
-
-        $this->fetch($apropos, $this->AproposModel);
 	}
 
 	public function fetch($data, $model)
@@ -109,5 +104,30 @@ class Cron extends MY_Controller {
 	        $model->create($data);
 		}
 
+	}
+
+	public function trigger_delete($entity)
+	{
+		$api = $entity['api'];
+		$model = $entity['model'];
+		$multiple = $entity['multiple'];
+		
+		$this->load->model($model);
+
+		$items = $this->$model->read('*');
+		$data = (array)$this->shissab->$api();
+
+		foreach ($items as $item) {
+			$checked = false;
+			foreach ($data as $value) {
+				if ($value->id == $item->id) {
+					$checked = true;
+				}
+			}
+
+			if (!$checked) {
+				$this->$model->delete(array('id' => $item->id));
+			}
+		}
 	}
 }
