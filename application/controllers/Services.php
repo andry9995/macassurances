@@ -6,27 +6,13 @@ class Services extends MY_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('ProduitModel');
 	}
 	
-	/**
-	 * { function_description }
-	 */
 	public function index()
 	{
 		$this->data['titre'] = $this->layout->set_titre('Nos Produits');
-
-
-        /**
-         * APIServices
-         * Cette variable stock dans un tablau les services d'un site web, 
-         * Enregister dépuis Shissab System
-         * @return id, nom, description, img
-         * @var array
-         */
-        
-        $this->data['APIServices'] = $this->shissab->produits();
-
-        //var_dump($this->data['APIServices']);
+        $this->data['APIServices'] = $this->ProduitModel->read('*');
 
 		$this->layout->view('services/service', $this->data);
 		$this->layout->views('partials/none');
@@ -34,7 +20,7 @@ class Services extends MY_Controller {
 
 	public function show($id)
 	{
-		$service = $this->shissab->produit($id);
+		$service = $this->ProduitModel->read('*', array("id"=> $id))[0];
 
 		$this->data['service'] = $service;
 		

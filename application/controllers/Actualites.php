@@ -6,16 +6,14 @@ class Actualites extends MY_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('ActualiteModel');
+
 	}
-	
-	/**
-	 * { function_description }
-	 */
+
 	public function index()
 	{
 		$this->data['titre'] = $this->layout->set_titre('Nos Actualités');
-
-        $this->data['actualites'] = $this->shissab->actualites();
+        $this->data['actualites'] = $this->ActualiteModel->read('*');
 
 		$this->layout->view('actualites/index', $this->data);
 		$this->layout->views('partials/none');
@@ -23,7 +21,7 @@ class Actualites extends MY_Controller {
 
 	public function show($id)
 	{
-		$actualite = $this->shissab->actualite($id);
+		$actualite = $this->ActualiteModel->read('*', array("id"=> $id))[0];
 
 		$this->data['actualite'] = $actualite;
 		

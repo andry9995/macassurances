@@ -14,6 +14,7 @@ class Cron extends MY_Controller {
 		$this->load->model('ActualiteModel');
 		$this->load->model('ProduitModel');
 		$this->load->model('BureauModel');
+		$this->load->model('MembreModel');
 	}
 
 	public function run()
@@ -26,6 +27,24 @@ class Cron extends MY_Controller {
 		$this->actualites();
 		$this->produits();
 		$this->bureaux();
+		$this->membres();
+	}
+
+	public function membres()
+	{
+
+        $membres = (array)$this->shissab->membres();
+
+        foreach ($membres as $membre) {
+
+        	$membre = (array)$membre;
+
+        	$this->fetch( 
+        		$membre, 
+        		$this->MembreModel 
+        	);
+        }
+
 	}
 
 	public function bureaux()
