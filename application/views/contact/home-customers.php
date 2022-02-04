@@ -1,6 +1,6 @@
-<section class="section brands bg-mac">
+<section class="section brands">
 	<header class="container text-center">
-        <h1 class="section-title text-white">Elles nous fait confiance</h1>
+        <h1 class="section-title">Elles nous fait confiance</h1>
     </header>
 
     <div class="container">

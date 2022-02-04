@@ -3,80 +3,49 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends MY_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
-
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('SectionModel');
+		$this->load->model('CustomerModel');
+		$this->load->model('SliderModel');
+		$this->load->model('ActualiteModel');
+		$this->load->model('ProduitModel');
+		$this->load->model('BureauModel');
 	}
 
-	/**
-	 * { function_description }
-	 */
 	public function index()
 	{		
-		/*$this->sendMail();
-		die();*/
 		$this->home();
 	}
 
-	/**
-	 * { function_description }
-	 */
+	public function get_sections()
+	{
+		$sections = $this->SectionModel->read('*',array('slug'));
+
+		if (!empty($sections)) {
+			$results = [];
+			
+			foreach ($sections as $section) {
+				$results[$section->slug] = $section->valeur;
+			}
+
+			return $results;
+
+		}
+
+		return [];
+	}
+
 	public function home()
 	{
 		$this->data['titre'] = $this->layout->set_titre('Accueil');
-
-
-        $this->data['sections'] = (array)$this->shissab->sections();
-
-        $this->data['customers'] = (array)$this->shissab->customers();
-
-		/**
-         * APISlider
-         * Cette variable stock dans un tablau les sliders de l'accueil d'un site web, 
-         * Enregister dépuis Shissab System
-         * @return id, titre, sous_titre, img
-         * @var array
-         */
-
-        $this->data['APISlider'] = $this->shissab->sliders();
-
-        /**
-         * APIActualités
-         * Cette variable stock dans un tablau les actualités d'un site web, 
-         * Enregister dépuis Shissab System
-         * @return id, titre, description, img
-         * @var array
-         */
-        
-        $this->data['APIActualites'] = $this->shissab->actualites();
-
-        /**
-         * APIServices
-         * Cette variable stock dans un tablau les services d'un site web, 
-         * Enregister dépuis Shissab System
-         * @return id, nom, description, img
-         * @var array
-         */
-        
-        $this->data['APIServices'] = $this->shissab->produits();
-
-        $this->data['bureaux'] = (array)$this->shissab->bureaux();
+        $this->data['sections'] = $this->get_sections();
+        $this->data['customers'] = $this->CustomerModel->read('*');
+        $this->data['APISlider'] = $this->SliderModel->read('*');
+        $this->data['APIActualites'] = $this->ActualiteModel->read('*');
+        $this->data['APIServices'] = $this->ProduitModel->read('*');
+        $this->data['bureaux'] = $this->BureauModel->read('*');
 
 		$this->layout->view('slider/home-slider', $this->data);
 		$this->layout->view('apropos/home-vision');
@@ -90,7 +59,6 @@ class Welcome extends MY_Controller {
 
 	public function post()
 	{
-		echo "ça marche";
 
 		if ($this->input->post()) {
 			

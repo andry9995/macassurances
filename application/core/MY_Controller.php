@@ -23,11 +23,12 @@ class MY_Controller extends CI_Controller
 		parent::__construct();
 		//$this->output->enable_profiler(TRUE);
 		$this->load->library('layout');
-		$this->load->library('shissab');
 		$this->load->helper('date');
 		$this->load->helper('assets');
 		$this->load->helper('url');
 
+		$this->load->model('AproposModel');
+		
 		setlocale(LC_TIME, 'fr');
 
         $this->data = [ 
@@ -36,8 +37,10 @@ class MY_Controller extends CI_Controller
             'function' =>  $this->get_instance()->router->fetch_method()
         ];
 
-		$this->data['apropos'] = $this->shissab->apropos();
-		
+        $apropos = $this->AproposModel->read('*');
+
+		$this->data['apropos'] = (!empty($apropos)) ? $apropos[0] : null ;
+
 		$this->data['css'] = array();
 		$this->data['js'] = array();
 		

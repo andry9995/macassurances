@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title><?php echo $titre; ?> | <?php echo $apropos->titre ?></title>
+    <title><?php echo $titre; ?> | <?php echo $apropos ? $apropos->titre : '' ?></title>
     <meta name="description" content="MAC Mutuelle d'Assurances Comores">
     <meta name="author" content="mac assurances">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -36,6 +36,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
 
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/slick/slick-theme.css"/>
 
 
     <?php foreach ($css as $css) : ?>
@@ -49,7 +52,7 @@
             <nav class="navbar navbar-light navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand navbar-brand-img" href="index.html">
-                        <img src="<?php echo $apropos->logo; ?>" class="logo logo-dark" alt="logo">
+                        <img src="<?php echo $apropos ? $apropos->logo : ''; ?>" class="logo logo-dark" alt="logo">
                     </a>
 
                     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,7 +99,7 @@
                             <div class="contact-info-box text-center">
                                 <span class="contact-info-icon yellowbg"><i class="fas fa-map-marked-alt"></i></span>
                                 <ul class="contact-info-list">
-                                    <li><?php echo $apropos->adresse ?></li>
+                                    <li><?php echo $apropos ? $apropos->adresse : '' ?></li>
                                 </ul>
                             </div><!-- End .contact-info-box -->
                         </div><!-- End .col-lg-4 -->
@@ -105,7 +108,7 @@
                             <div class="contact-info-box text-center">
                                 <span class="contact-info-icon lightbluebg"><i class="fas fa-mobile-alt"></i></span>
                                 <ul class="contact-info-list">
-                                    <li><a href="tel:#"><?php echo $apropos->tel_mobile ?></a></li>
+                                    <li><a href="tel:#"><?php echo $apropos ? $apropos->tel_mobile : '' ?></a></li>
                                 </ul>
                             </div><!-- End .contact-info-box -->
                         </div><!-- End .col-lg-4 -->
@@ -114,7 +117,7 @@
                             <div class="contact-info-box text-center">
                                 <span class="contact-info-icon redbg"><i class="far fa-envelope"></i></span>
                                 <ul class="contact-info-list">
-                                    <li><a href="mailto:<?php echo $apropos->email ?>"><?php echo $apropos->email ?></a></li>
+                                    <li><a href="mailto:<?php echo $apropos ? $apropos->email : ''?>"><?php echo $apropos ? $apropos->email : ''?></a></li>
                                 </ul>
                             </div><!-- End .contact-info-box -->
                         </div><!-- End .col-lg-4 -->
@@ -312,9 +315,10 @@
                 }
             }
 
-
-            });
+        });
     </script>
+
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/slick/slick.min.js"></script>
 
 </body>
 </html>

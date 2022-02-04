@@ -118,6 +118,8 @@ li.portfolio-item {
 
 .portfolio-item-wrapper {
     max-height: 188px;
+    border: 1px solid #0092e0;
+    border-bottom: none;
 }
 
 section#our-vision {
@@ -314,4 +316,8 @@ article.article.wow {
 
 .brands_next {
     right: 40px
+}
+
+.section-pd {
+    padding: 10rem;
 }

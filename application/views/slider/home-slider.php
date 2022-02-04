@@ -52,7 +52,7 @@
                     <!-- LAYER NR. 3 -->
                     <div class="tp-caption tp-resizeme text-uppercase" 
                         id="slide-1-layer-3" 
-                        data-x="['left','left','left','left']" data-hoffset="['150','100','50','20']" 
+                        data-x="['left','left','left','left']" data-hoffset="['15','10','5','2']" 
                         data-y="['middle','middle','middle','middle']" data-voffset="['-177','-177','-177','-157']" 
                         data-width="none"
                         data-height="none"
@@ -66,12 +66,12 @@
                         data-paddingbottom="[10,10,10,10]"
                         data-paddingleft="[20,20,20,20]"
     
-                        style="z-index: 7; white-space: normal; font-size: 20px; line-height: 20px; font-weight: 600; color: #ffffff; letter-spacing: 4px;"><?php echo $slide->titre; ?></div>
+                        style="z-index: 7; white-space: normal; font-size: 20px; line-height: 20px; font-weight: 600; color: #fff401; letter-spacing: 4px;"><?php echo $slide->titre; ?></div>
     
                     <!-- LAYER NR. 4 -->
                     <div class="tp-caption   tp-resizeme" 
                         id="slide-1-layer-4" 
-                        data-x="['left','left','left','left']" data-hoffset="['150','100','50','20']" 
+                        data-x="['left','left','left','left']" data-hoffset="['15','10','5','2']" 
                         data-y="['middle','middle','middle','middle']" data-voffset="['-30','-30','-30','-30']" 
                         data-fontsize="['70','70','70','48']"
                         data-lineheight="['70','70','70','50']"
