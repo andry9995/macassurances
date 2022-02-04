@@ -1,34 +1,32 @@
-<!-- Begin Home Produit -->
-<section id="portfolio" class="section bg-lightgray section-pd">
+<section class="section brands section bg-lightgray section-pd" id="portfolio">
     <header class="container text-center">
-        <h1 class="section-title">Nos Produits</h1>
+        <h1 class="section-title">Nos produits</h1>
     </header>
 
     <div class="container">
-        <div id="portfolio-wrapper">
-            <ul id="portfolio-item-container" class="clearfix" data-maxcolumn="4" data-animationclass="fadeInUpBig">
-                <?php foreach ($APIServices as $key => $service) : ?>
-                        <li class="portfolio-item animate-item photography" data-animate-time="80">
-                            <div class="portfolio-item-wrapper">
-
-                                <div class=" d-flex justify-content-center">
-                                    <img style="width: 125px;padding: 25px;" src="<?php echo $service->icon ?>" alt="Image de : <?= $service->nom; ?>">
+        <div class="row">
+            <div class="col">
+                <div class="mac_slider_container">
+                    <div class="owl-carousel owl-theme service_slider">
+                        <?php foreach ($APIServices as $service): ?>
+                            <div class="owl-item">
+                                <div class="mac_slider_item">
+                                    <a href="<?php echo site_url('services/show/' . $service->id) ?>">
+                                        <div class="mac_slider_img">
+                                            <img src="<?php echo $service->icon ?>" alt="">
+                                        </div>
+                                        <div class="portfolio-item-title mac_slider_title">
+                                            <h4>
+                                                <a href="<?php echo site_url('services/show/' . $service->id) ?>"><?= $service->nom; ?></a>
+                                            </h4>
+                                        </div>
+                                    </a>
                                 </div>
-
-                                <div class="portfolio-overlay overlay-yellow">
-                                    <a href="<?php echo site_url('services/show/' . $service->id) ?>" title="Plus d'informations sur : <?= $service->nom; ?>" class="open-btn"></a>
-                                    <h2 class="portfolio-title"><a href="<?php echo site_url('services/show/' . $service->id) ?>" title="<?= $service->nom; ?>"><?= $service->nom; ?></a></h2>
-                                </div><!-- End .portfolio-overlay -->
-                            </div><!-- End .portfolio-item-wrapper -->
-                            <div class="portfolio-item-title">
-                                <h4>
-                                    <a href="<?php echo site_url('services/show/' . $service->id) ?>"><?= $service->nom; ?></a>
-                                </h4>
                             </div>
-                        </li>
-                <?php endforeach; ?>
-            </ul><!-- End #portfolio-item-container -->
-        </div><!-- End .portfolio-wrapper -->
+                        <?php endforeach ?>
+                    </div> <!-- Brands Slider Navigation -->
+                </div>
+            </div>
+        </div>
     </div>
 </section>
-<!-- #End Home Produit -->

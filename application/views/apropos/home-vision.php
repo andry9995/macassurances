@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <?php echo $sections['notrevision'] ?>
+                <?php echo !empty($sections) ? $sections['notrevision'] : ''?>
             </div>
         </div>
     </div>

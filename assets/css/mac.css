@@ -321,3 +321,28 @@ article.article.wow {
 .section-pd {
     padding: 10rem;
 }
+
+.mac_slider_item {
+    width: 300px;
+    background: #fff;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.mac_slider_img {
+    justify-content: center;
+    display: flex;
+}
+
+.mac_slider_item img {
+    max-width: 75px;
+}
+
+.mac_slider_container {
+    height: auto;
+}
+
+.mac_slider_title h4 {
+    text-align: center;
+    text-transform: uppercase !important;
+}

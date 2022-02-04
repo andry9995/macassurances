@@ -3,7 +3,7 @@
         <div class="row">
         <div class="col-lg-6">
             <div class="values-img wow fadeInLeftBig">
-                <img src="<?php echo $sections['nosvaleursimage'] ?>">
+                <img src="<?php echo !empty($sections) ? $sections['nosvaleursimage'] : '' ?>">
             </div>
         </div>
         <div class="col-lg-6">
@@ -14,7 +14,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 text-white">
-                            <?php echo $sections['nosvaleurs'] ?>
+                            <?php echo !empty($sections) ? $sections['nosvaleurs'] : '' ?>
                         </div>
                     </div>
                 </div>
