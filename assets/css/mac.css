@@ -346,3 +346,13 @@ article.article.wow {
     text-align: center;
     text-transform: uppercase !important;
 }
+
+.customer_item {
+    width: 150px !important;
+}
+
+.owl-carousel{
+    display: flex !important;  // to override display:bloc i added !important
+    flex-direction: row;   
+    justify-content: center;  // to center you carousel
+}

@@ -148,5 +148,22 @@ $(document).ready(function() {
         margin:25
     });
 
+    // slick customers
+
+    var customers = $('.customer_slider');
+
+    customers.owlCarousel(
+    {
+        loop:false,
+        autoplay:true,
+        autoplayTimeout:5000,
+        nav:false,
+        dots:false,
+        autoWidth:true,
+        items:4,
+        margin:25
+
+    }); 
+
 
 }); /*ready*/
