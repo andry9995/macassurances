@@ -15,6 +15,7 @@ class Welcome extends MY_Controller {
 		$this->load->model('ActualiteModel');
 		$this->load->model('ProduitModel');
 		$this->load->model('BureauModel');
+		$this->load->model('VideoModel');
 	}
 
 	public function index()
@@ -49,12 +50,14 @@ class Welcome extends MY_Controller {
         $this->data['APIActualites'] = $this->ActualiteModel->read('*');
         $this->data['APIServices'] = $this->ProduitModel->read('*');
         $this->data['bureaux'] = $this->BureauModel->read('*');
+        $this->data['videos'] = $this->VideoModel->read('*');
 
 		$this->layout->view('slider/home-slider', $this->data);
 		$this->layout->view('apropos/home-vision');
 		$this->layout->view('apropos/home-valeur');
 		$this->layout->view('services/home-service');
 		$this->layout->view('actualites/home-actualite');
+		$this->layout->view('videos/home-video');
 		$this->layout->view('contact/home-agences');
 		$this->layout->view('contact/home-customers');
 		$this->layout->views('contact/home-contact');

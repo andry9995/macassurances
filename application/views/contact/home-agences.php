@@ -1,6 +1,6 @@
-<section id="aboutus" class="section bg-lightgray">
+<section id="aboutus" class="section bg-mac">
     <header class="container text-center">
-        <h1 class="section-title"><?php echo count($bureaux) ?> Agences à travers Comores</h1>
+        <h1 class="section-title text-white"><?php echo count($bureaux) ?> Agences à travers Comores</h1>
     </header>
 
     <div class="container">

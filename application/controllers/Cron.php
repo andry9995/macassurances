@@ -53,6 +53,11 @@ class Cron extends MY_Controller {
 				'api' => 'membres',
 				'model' => 'MembreModel',
 				'multiple' => true
+			),
+			array(
+				'api' => 'videos',
+				'model' => 'VideoModel',
+				'multiple' => true
 			)
 		);
 

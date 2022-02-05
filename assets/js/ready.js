@@ -134,9 +134,25 @@ $(document).ready(function() {
 
     // slick produits
 
-    var services = $('.service_slider');
+    // var services = $('.service_slider');
 
-    services.owlCarousel(
+    // services.owlCarousel(
+    // {
+    //     loop:true,
+    //     autoplay:true,
+    //     autoplayTimeout:5000,
+    //     nav:false,
+    //     dots:false,
+    //     autoWidth:true,
+    //     items:4,
+    //     margin:25
+    // });
+
+    // slick customers
+
+    var customers = $('.customer_slider');
+
+    customers.owlCarousel(
     {
         loop:true,
         autoplay:true,
@@ -144,13 +160,21 @@ $(document).ready(function() {
         nav:false,
         dots:false,
         autoWidth:true,
-        items:4,
+        items:6,
         margin:25
+
+    }); 
+
+    $(document).on('click','.rev-btn,.d-click',function(event) {
+        event.preventDefault();
+
+        var href = $(this).data('href');
+
+        window.location.href = href;
     });
 
-    // slick customers
 
-    var customers = $('.customer_slider');
+    var customers = $('.video_slider');
 
     customers.owlCarousel(
     {
@@ -160,10 +184,9 @@ $(document).ready(function() {
         nav:false,
         dots:false,
         autoWidth:true,
-        items:4,
-        margin:25
+        items:2,
+        margin:100
 
     }); 
-
 
 }); /*ready*/

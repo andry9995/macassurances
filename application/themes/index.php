@@ -95,7 +95,7 @@
             <div class="footer-social-icons">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-sm-6 col-lg-4 wow fadeInLeftBig">
+                        <div class="col-sm-6 col-lg-4">
                             <div class="contact-info-box text-center">
                                 <span class="contact-info-icon yellowbg"><i class="fas fa-map-marked-alt"></i></span>
                                 <ul class="contact-info-list">
@@ -104,18 +104,18 @@
                             </div><!-- End .contact-info-box -->
                         </div><!-- End .col-lg-4 -->
                         
-                        <div class="col-sm-6 col-lg-4 wow fadeInDownBig">
+                        <div class="col-sm-6 col-lg-4">
                             <div class="contact-info-box text-center">
-                                <span class="contact-info-icon lightbluebg"><i class="fas fa-mobile-alt"></i></span>
+                                <span class="contact-info-icon yellowbg"><i class="fas fa-mobile-alt"></i></span>
                                 <ul class="contact-info-list">
                                     <li><a href="tel:#"><?php echo $apropos ? $apropos->tel_mobile : '' ?></a></li>
                                 </ul>
                             </div><!-- End .contact-info-box -->
                         </div><!-- End .col-lg-4 -->
 
-                        <div class="col-sm-6 col-lg-4 wow fadeInRightBig">
+                        <div class="col-sm-6 col-lg-4">
                             <div class="contact-info-box text-center">
-                                <span class="contact-info-icon redbg"><i class="far fa-envelope"></i></span>
+                                <span class="contact-info-icon yellowbg"><i class="far fa-envelope"></i></span>
                                 <ul class="contact-info-list">
                                     <li><a href="mailto:<?php echo $apropos ? $apropos->email : ''?>"><?php echo $apropos ? $apropos->email : ''?></a></li>
                                 </ul>

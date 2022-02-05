@@ -872,12 +872,17 @@
 
 		var marker, i;
 
+		var icon = {
+	        url: 'assets/images/pin.png',
+	        scaledSize: new google.maps.Size(32, 32), // size
+	    };
+
 		for (i = 0; i < locations.length; i++) {  
 			marker = new google.maps.Marker({
 				position: new google.maps.LatLng(locations[i][1], locations[i][2]),
 				map: map,
 				animation: google.maps.Animation.DROP,
-				icon: 'assets/images/pin.png',
+				icon: icon,
 			});
 
 			google.maps.event.addListener(marker, 'click', (function(marker, i) {

@@ -189,6 +189,16 @@ class Shissab
 	}
 
 	/**
+	 * Liste des videos
+	 *
+	 * @return     array
+	 */
+	public function videos()
+	{
+		return $this->get("video/list", [$this->sitekey]);
+	}
+
+	/**
 	 * Curl get
 	 *
 	 * @param      string  $resource    The resource

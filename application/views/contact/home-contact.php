@@ -1,5 +1,5 @@
 <!--  Begin Home Contact -->
-<section id="contactus" class="section">
+<section id="contactus" class="section bg-lightgray">
     <header class="container text-center">
         <h1 class="section-title">Contactez-nous</h1>
     </header>
@@ -13,18 +13,24 @@
             </div>
             <div class="col-lg-6 wow fadeInRightBig">
                 <div class="row justify-content-center">
-                    <div class="col-md-10 col-lg-8">
+                    <div class="col-sm-12">
                         <!-- <h2 class="text-center lg-margin">Entrer en contact</h2> -->
                         <form action="<?php echo site_url('welcome/post'); ?>" id="contact-form" method="post" novalidate>
-                            <div class="form-group">
-                                <input type="text" name="contactname" id="contactname" required class="form-control form-control-lg">
-                                <label for="contactname" class="animated-label">Nom *</label>
-                            </div><!-- End .form-group -->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" name="contactname" id="contactname" required class="form-control form-control-lg">
+                                        <label for="contactname" class="animated-label">Nom *</label>
+                                    </div><!-- End .form-group -->
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="email" name="contactemail" id="contactemail" required class="form-control form-control-lg">
+                                        <label for="contactemail" class="animated-label">Email *</label>
+                                    </div><!-- End .form-group -->
+                                </div>
+                            </div>
 
-                            <div class="form-group">
-                                <input type="email" name="contactemail" id="contactemail" required class="form-control form-control-lg">
-                                <label for="contactemail" class="animated-label">Email *</label>
-                            </div><!-- End .form-group -->
 
                             <div class="form-group">
                                 <input type="text" name="contactsubject" id="contactsubject" class="form-control form-control-lg">

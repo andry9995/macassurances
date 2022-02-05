@@ -1,5 +1,5 @@
 <!-- Begin Home Actualités-->
-<section id="blog" class="section">
+<section id="blog" class="section bg-lightgray">
     <header class="container text-center">
         <h1 class="section-title">Nos actualités récentes</h1>
         <!-- <p class="section-desc">

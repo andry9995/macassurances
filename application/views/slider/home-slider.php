@@ -13,21 +13,22 @@
                     <!-- LAYER NR. 1 -->
                     <div class="tp-caption rev-btn  tp-resizeme" 
                         id="slide-1-layer-1" 
-                        data-x="['left','left','left','left']" data-hoffset="['170','120','70','40']" 
+                        data-x="['left','left','left','left']" data-hoffset="['35','10','5','2']" 
                         data-y="['middle','middle','middle','middle']" data-voffset="['150','150','150','110']" 
                         data-width="none"
                         data-height="none"
                         data-whitespace="normal"
                         data-type="button" 
                         data-responsive_offset="on" 
-                        data-frames='[{"delay":500,"speed":1000,"sfxcolor":"#f8d61b","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(0,0,0);bg:rgb(255,255,255);"}]'
+                        data-frames='[{"delay":500,"speed":1000,"sfxcolor":"#f8d61b","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bg:#fff401;"}]'
                         data-textAlign="['inherit','inherit','inherit','inherit']"
                         data-paddingtop="[0,0,0,0]"
                         data-paddingright="[30,30,30,30]"
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[30,30,30,30]"
+                        data-href="<?php echo site_url('histoire'); ?>"
     
-                        style="z-index: 5; white-space: normal; font-size: 15px; line-height: 50px; font-weight: 400; color: rgba(255,255,255,1); letter-spacing: 2px; border-color:rgb(255,255,255);border-style:solid;border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
+                        style="z-index: 5; white-space: normal; font-size: 15px; line-height: 50px; font-weight: 400; color: #fff401; letter-spacing: 2px; border-color:#fff401;border-style:solid;border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
                         À&nbsp;PROPOS
                     </div>
     
