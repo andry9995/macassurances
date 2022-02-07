@@ -3,9 +3,10 @@
         <h1 class="section-title">Nos produits</h1>
     </header>
     <div class="container">
-        <div class="service-container">
+        <!-- <div class="service-container"> -->
+        <div class="row justify-content-center">
             <?php foreach ($APIServices as $service): ?>
-                <div class="service-item d-click" data-href="<?php echo site_url('services/show/' . $service->id) ?>">
+                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 service-item d-click" data-href="<?php echo site_url('services/show/' . $service->id) ?>">
                     <div class="service-item-img">
                         <img src="<?php echo $service->icon ?>">
                     </div>

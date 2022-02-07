@@ -96,75 +96,6 @@ $(document).ready(function() {
         });
     }
 
-
-    if($('.brands_slider').length)
-    {
-        var brandsSlider = $('.brands_slider');
-
-        brandsSlider.owlCarousel(
-        {
-            loop:true,
-            autoplay:true,
-            autoplayTimeout:5000,
-            nav:false,
-            dots:false,
-            autoWidth:true,
-            items:8,
-            margin:100
-        });
-
-        if($('.brands_prev').length)
-        {
-            var prev = $('.brands_prev');
-            prev.on('click', function()
-            {
-                brandsSlider.trigger('prev.owl.carousel');
-            });
-        }
-
-        if($('.brands_next').length)
-        {
-            var next = $('.brands_next');
-            next.on('click', function()
-            {
-                brandsSlider.trigger('next.owl.carousel');
-            });
-        }
-    }
-
-    // slick produits
-
-    // var services = $('.service_slider');
-
-    // services.owlCarousel(
-    // {
-    //     loop:true,
-    //     autoplay:true,
-    //     autoplayTimeout:5000,
-    //     nav:false,
-    //     dots:false,
-    //     autoWidth:true,
-    //     items:4,
-    //     margin:25
-    // });
-
-    // slick customers
-
-    var customers = $('.customer_slider');
-
-    customers.owlCarousel(
-    {
-        loop:true,
-        autoplay:true,
-        autoplayTimeout:5000,
-        nav:false,
-        dots:false,
-        autoWidth:true,
-        items:6,
-        margin:25
-
-    }); 
-
     $(document).on('click','.rev-btn,.d-click',function(event) {
         event.preventDefault();
 
@@ -174,19 +105,44 @@ $(document).ready(function() {
     });
 
 
-    var customers = $('.video_slider');
-
-    customers.owlCarousel(
-    {
-        loop:false,
-        autoplay:true,
-        autoplayTimeout:5000,
-        nav:false,
-        dots:false,
-        autoWidth:true,
-        items:2,
-        margin:100
-
-    }); 
-
 }); /*ready*/
+
+$(window).on('load', function() {
+    $('.responsive').slick({
+      dots: true,
+      infinite: true,
+       autoplay: true,
+        autoplaySpeed: 2000,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+})

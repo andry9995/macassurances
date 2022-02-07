@@ -50,7 +50,7 @@ class Welcome extends MY_Controller {
         $this->data['APIActualites'] = $this->ActualiteModel->read('*');
         $this->data['APIServices'] = $this->ProduitModel->read('*');
         $this->data['bureaux'] = $this->BureauModel->read('*');
-        $this->data['videos'] = $this->VideoModel->read('*');
+        $this->data['videos'] = $this->VideoModel->read('*',[],'id',2);
 
 		$this->layout->view('slider/home-slider', $this->data);
 		$this->layout->view('apropos/home-vision');

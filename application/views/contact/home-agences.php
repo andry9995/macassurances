@@ -4,7 +4,7 @@
     </header>
 
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
 
             <?php foreach ($bureaux as $key => $bureau): ?>
                 <div class="col-sm-6 col-lg-3 member-container">

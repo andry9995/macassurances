@@ -87,13 +87,13 @@ li.nav-item {
 
 .portfolio-item-title h4 a,
 .service-item-title h4 a {
-	font-size: 15PX;
+	font-size: 15px;
 	color: #0092e0;
 	/*text-transform: uppercase;*/
 }
 
 h4.member-name {
-    font-size: 20px;
+    font-size: 15px;
     color: #0092e0;
     text-align: center;
     background: #fff;
@@ -102,7 +102,7 @@ h4.member-name {
 }
 
 .portfolio-item-title{
-	padding: 2.3rem;
+	/*padding: 2.3rem;*/
 	background: #fff;
 }
 
@@ -402,6 +402,7 @@ article.article.wow {
 .service-item-img {
     width: 75px;
     margin: auto;
+    padding: 10px;
 }
 
 .service-container{
@@ -414,4 +415,36 @@ article.article.wow {
 
 .p-50 {
     padding: 0 50px !important;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #0092e0 !important;
+}
+
+@media (max-width: 576px) {
+    .portfolio-item-title h4 a, .service-item-title h4 a {
+        font-size: 10px;
+    }
+
+    .service-item-img {
+        width: 60px;
+    }
+
+    .mac_slider_title h4, .service-item-title h4 {
+        line-height: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    section#our-vision {
+        overflow: auto;
+        max-height: 495px;
+        margin: 15px !important;
+        padding: 15px !important;
+    }
+
+    .section-title {
+        font-size: 4rem !important;
+    }
 }

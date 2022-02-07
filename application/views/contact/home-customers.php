@@ -7,7 +7,19 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="mac_slider_container p-50">
+
+                <div class="slider responsive">
+                    <?php foreach ($customers as $customer): ?>
+                        <div class="mac_slider_item">
+                            <div class="mac_slider_img ">
+                                <img src="<?php echo $customer->img ?>" alt="">
+                            </div>
+                        </div>
+                    <?php endforeach ?>
+
+                </div>
+
+                <!-- <div class="mac_slider_container p-50">
                     <div class="owl-carousel owl-theme customer_slider">
                         <?php foreach ($customers as $customer): ?>
                             <div class="owl-item">
@@ -18,8 +30,8 @@
                                 </div>
                             </div>
                         <?php endforeach ?>
-                    </div> <!-- Brands Slider Navigation -->
-                </div>
+                    </div> 
+                </div> -->
             </div>
         </div>
     </div>
