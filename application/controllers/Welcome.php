@@ -53,6 +53,7 @@ class Welcome extends MY_Controller {
         $this->data['videos'] = $this->VideoModel->read('*',[],'id',2);
 
 		$this->layout->view('slider/home-slider', $this->data);
+		$this->layout->view('slider/home-slider-768');
 		$this->layout->view('apropos/home-vision');
 		$this->layout->view('apropos/home-valeur');
 		$this->layout->view('services/home-service');

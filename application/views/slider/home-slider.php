@@ -33,7 +33,7 @@
                     </div>
     
                     <!-- LAYER NR. 2 -->
-                    <div class="tp-caption   tp-resizeme rs-parallaxlevel-2" 
+                    <div class="tp-caption   tp-resizeme rs-parallaxlevel-2 l-2" 
                         id="slide-1-layer-2" 
                         data-x="['center','center','center','center']" data-hoffset="['500','500','390','220']" 
                         data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 

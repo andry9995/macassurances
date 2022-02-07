@@ -39,12 +39,21 @@
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/preloader.css"/>
 
 
     <?php foreach ($css as $css) : ?>
         <link rel="stylesheet" href="<?php echo $css; ?>">
     <?php endforeach; ?>
 </head>
+
+<div id="preloader"> 
+  <div id="loader-img">
+    <div id="loader"></div> 
+  </div>
+  <div id="panel_left" class='loader-section section-left'></div>
+  <div id="panel_right" class='loader-section section-right'></div>
+</div>
 
 <body data-spy="scroll" data-bs-spy="scroll" data-bs-target="#main-menu">
     <div id="wrapper">
