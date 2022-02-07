@@ -337,6 +337,8 @@ article.article.wow {
 .mac_slider_img {
     justify-content: center;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .mac_slider_item img {
@@ -504,4 +506,16 @@ article.article.wow {
         width: 360px;
     }
 
+}
+
+.member-desc {
+    margin-top: 20px;
+}
+
+.member-desc h2{
+    font-size: 15px;
+}
+
+.member-desc h3{
+    font-size: 12px;
 }
