@@ -91,25 +91,16 @@ class Welcome extends MY_Controller {
 	public function sendMail($subject="", $message="", $from="")
 	{
 		$this->load->library('email');
+		$this->load->config('mail.config');
 
-		$config = array(
-			'protocol' => 'smtp',
-			'smtp_host' => 'ssl://smtp.gmail.com',
-			'smtp_timeout' => 30,
-			'smtp_port' => 465,
-			'smtp_user' => 'hikam.test.email@gmail.com',
-			'smtp_pass' => 'info@hikam',
-			'charset' => 'utf-8',
-			'mailtype' => 'html',
-			'newline' => '\r\n'
-		);
+		$config = $this->config->item('smtp');
+		$mail = $this->config->item('mail');
 
 		$this->email->initialize($config);
-
-		$this->email->set_newline("\r\n");
-		$this->email->set_crlf("\r\n");
+		$this->email->set_newline($mail['newline']);
+		$this->email->set_crlf($mail['crlf']);
 		$this->email->from($from);
-		$this->email->to("hikam.test.email@gmail.com");
+		$this->email->to($mail['to']);
 		$this->email->subject($subject);
 		$this->email->message($message);
 		
