@@ -26,8 +26,8 @@ class MY_Controller extends CI_Controller
 		$this->load->helper('date');
 		$this->load->helper('assets');
 		$this->load->helper('url');
-
 		$this->load->model('AproposModel');
+		$this->load->config('menu.config');
 		
 		setlocale(LC_TIME, 'fr');
 
@@ -40,6 +40,8 @@ class MY_Controller extends CI_Controller
         $apropos = $this->AproposModel->read('*');
 
 		$this->data['apropos'] = (!empty($apropos)) ? $apropos[0] : null ;
+
+		$this->data['menu'] = $this->config->item('menu');
 
 		$this->data['css'] = array();
 		$this->data['js'] = array();

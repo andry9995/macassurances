@@ -70,28 +70,33 @@
                         <span class="navbar-toggler-bar toggler-bar-bottom"></span>
                     </button>
 
-
                     <div class="collapse navbar-collapse flex-lg-grow-0 ms-lg-auto" id="main-menu">
                         <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="<?php echo site_url(); ?>">Accueil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?php echo site_url('services'); ?>">Nos Produits</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?php echo site_url('agences'); ?>">Réseau et Contact</a>
-                            </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="#portfolio">Devis</a>
-                            </li> -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">À Propos</a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="<?php echo site_url('histoire'); ?>">Notre Histroire</a></li>
-                                    <li><a class="dropdown-item" href="<?php echo site_url('actualites'); ?>">Nos Actus</a></li>
-                                </ul>
-                            </li>
+                            <?php foreach ($menu as $item): ?>
+                                <?php if (empty($item['children'])): ?>
+                                    <li class="nav-item">
+                                        <a 
+                                            class="nav-link <?php if ($this->uri->uri_string() == $item['path']): ?> active <?php endif ?>" 
+                                            href="<?php echo site_url($item['path']); ?>"
+                                        >
+                                            <?php echo $item['name'] ?>
+                                        </a>
+                                    </li>
+                                <?php else: ?>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $item['name'] ?></a>
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                            <?php foreach ($item['children'] as $child): ?>
+                                                <li>
+                                                    <a class="dropdown-item" href="<?php echo site_url($child['path']); ?>">
+                                                        <?php echo $child['name'] ?>
+                                                    </a>
+                                                </li>
+                                            <?php endforeach ?>
+                                        </ul>
+                                    </li>
+                                <?php endif ?>
+                            <?php endforeach ?>
                         </ul>
                     </div><!-- End .navbar-collapse -->
                 </div><!-- End .container -->
