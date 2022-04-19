@@ -33,8 +33,8 @@
     <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/favicon.ico">
 
     <!-- carousel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"> -->
 
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/slick/slick.css"/>
@@ -149,7 +149,7 @@
     <a href="#top" id="scroll-top" title="Go to top"><i class="fas fa-angle-up"></i></a>
 
     <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsNNnxMPiLLBC4VqdR_YUjLefbhYzEN_E"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsNNnxMPiLLBC4VqdR_YUjLefbhYzEN_E"></script> -->
 
     <!-- Plugins -->
     <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
@@ -181,7 +181,7 @@
     <script src="<?php echo base_url(); ?>assets/js/extensions/revolution.extension.parallax.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/extensions/revolution.extension.slideanims.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/extensions/revolution.extension.video.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script> -->
     <script type="text/javascript" src="<?php echo base_url(); ?>assets/slick/slick.min.js"></script>
     
     <!-- Main js -->
