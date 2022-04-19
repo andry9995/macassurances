@@ -20,8 +20,8 @@
         <h1 class="section-title"><?php echo $apropos->titre ?></h1>
     </header>
     <div class="container">
-    	<div class="row">
-    		<div class="col-lg-12">
+    	<div class="row px-3">
+    		<div class="col-md-10 col-sm-12 col-lg-8 mx-auto border border-info p-5 mx-3 bg-b">
     			<p>
     				<?php echo $apropos->apropos ?>
     			</p>
@@ -41,10 +41,10 @@
     			<div class="slider responsive">
                     <?php foreach ($membres as $membre): ?>
                         <div class="mac_slider_item">
-                            <div class="mac_slider_img ">
+                            <div class="mac_slider_img no-border">
                                 <img src="<?php echo $membre->img ?>" alt="">
                                 <div class="member-desc text-center">
-                                    <h2><?php echo $membre->nom ?></h2>
+                                    <h2 style="color: #0092e0;"><?php echo $membre->nom ?></h2>
                                     <h3><?php echo $membre->poste ?></h3>
                                 </div>
                             </div>

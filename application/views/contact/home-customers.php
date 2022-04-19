@@ -1,7 +1,7 @@
 <section class="section brands section">
     <header class="container text-center p-0 mb-0">
         <br>
-        <h1 class="section-title">Elles nous font confiance</h1>
+        <h1 class="section-title">Ils nous font confiance</h1>
     </header>
 
     <div class="container">

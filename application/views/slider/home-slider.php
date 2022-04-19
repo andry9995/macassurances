@@ -93,7 +93,7 @@
                 <?php endforeach; ?>
 
             </ul>
-            <div class="tp-bannertimer" style="height: 5px; background-color: rgba(255, 255, 255, 0.5);"></div>	
+            <!-- <div class="tp-bannertimer" style="height: 5px; background-color: rgba(255, 255, 255, 0.5);"></div>	 -->
         </div><!-- End .rev_slider -->
     </div><!-- End .rev_slider_wrapper -->
 </section>

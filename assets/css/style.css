@@ -3065,7 +3065,7 @@ label {
 }
 
 .form-group:last-child {
-  margin-bottom:0;
+  /*margin-bottom:0;*/
 }
 
 .form-group .form-control {
@@ -7256,4 +7256,17 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	
 	/* End patterns */
 
+}
+
+.tp-bannertimer {
+  background: transparent !important;
+}
+
+.bg-b {
+  background: #00bcd40a;
+}
+
+.vision-container > div > h1 > blockquote {
+  padding: 0 10px;
+  margin: 0;
 }

@@ -1,4 +1,3 @@
-<!--  Begin Home Contact -->
 <section id="contactus" class="section bg-lightgray">
     <header class="container text-center">
         <h1 class="section-title">Contactez-nous</h1>
@@ -7,11 +6,11 @@
     <div class="container">
         
         <div class="row">
-            <div class="col-lg-6 wow fadeInLeftBig">
-                <div id="map"></div><!-- End #map -->
+            <!-- <div class="col-lg-6 wow fadeInLeftBig">
+                <div id="map"></div>
                 
-            </div>
-            <div class="col-lg-6 wow fadeInRightBig">
+            </div> -->
+            <div class="col-lg-12 wow fadeInRightBig">
                 <div class="row justify-content-center">
                     <div class="col-sm-12">
                         <!-- <h2 class="text-center lg-margin">Entrer en contact</h2> -->

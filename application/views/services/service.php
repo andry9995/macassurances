@@ -2,7 +2,7 @@
 <div class="page-header parallax bg-mac">
     <div class="container">
         <div class="page-header-wrapper">
-            <h1 class="page-title">Nos produits</h1>
+            <h1 class="page-title">Nos Produits</h1>
             <span class="breadcrumb-mac">
                 <a class="text-white" href="<?php echo base_url(); ?>">Accueil</a> 
                 <span class="text-white"><i class="fa fa-angle-right"></i></span> 
@@ -19,7 +19,6 @@
     <div class="container">
         <header class="text-secondary text-center">
             <h2>Nous disposons d'une large panel d'assurances</h2>
-            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore minima sunt praesentium ipsa adipisci mollitia nulla voluptates illo nisi nemo iure commodi, ad, possimus,</p>
         </header>
         <div id="portfolio-wrapper">
             <ul id="portfolio-item-container" class="clearfix" data-maxcolumn="4" data-animationclass="fadeInUpBig">
