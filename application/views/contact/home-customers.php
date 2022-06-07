@@ -9,11 +9,13 @@
             <div class="col">
                 <div class="slider responsive">
                     <?php foreach ($customers as $customer): ?>
-                        <div class="mac_slider_item">
-                            <div class="mac_slider_img ">
-                                <img src="<?php echo $customer->img ?>" alt="">
+                        <?php if (!$customer->desactive): ?>
+                            <div class="mac_slider_item">
+                                <div class="mac_slider_img ">
+                                    <img src="<?php echo $customer->img ?>" alt="">
+                                </div>
                             </div>
-                        </div>
+                        <?php endif ?>
                     <?php endforeach ?>
                 </div>
             </div>

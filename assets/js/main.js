@@ -24,7 +24,7 @@
 			this.videoBg();
 			this.fitTexts();
 			this.scrollAnimations();
-			this.menuScrollToAnimation();
+			// this.menuScrollToAnimation();
 			this.stickyMenu();
 			this.owlCarousels();
 			this.singlePortfolioOwl();

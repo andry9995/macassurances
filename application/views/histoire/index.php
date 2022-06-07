@@ -40,15 +40,17 @@
     		<div class="col">
     			<div class="slider responsive">
                     <?php foreach ($membres as $membre): ?>
-                        <div class="mac_slider_item">
-                            <div class="mac_slider_img no-border">
-                                <img src="<?php echo $membre->img ?>" alt="">
-                                <div class="member-desc text-center">
-                                    <h2 style="color: #0092e0;"><?php echo $membre->nom ?></h2>
-                                    <h3><?php echo $membre->poste ?></h3>
+                        <?php if (!$membre->desactive): ?>
+                            <div class="mac_slider_item">
+                                <div class="mac_slider_img no-border">
+                                    <img src="<?php echo $membre->img ?>" alt="">
+                                    <div class="member-desc text-center">
+                                        <h2 style="color: #0092e0;"><?php echo $membre->nom ?></h2>
+                                        <h3><?php echo $membre->poste ?></h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php endif ?>
                     <?php endforeach ?>
                 </div>
     		</div>
